@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+/.metadata/
+rt_pubsub/.cproject
+rt_pubsub/.project
+rt_pubsub/.settings
