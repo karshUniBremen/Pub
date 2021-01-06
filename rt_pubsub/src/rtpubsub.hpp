@@ -14,98 +14,172 @@
 #include <signal.h>
 #include <list>
 #include <stdexcept>
+#include <iostream>
 
-class rt_pub {
+
+/**
+ * @brief 
+ * @author 
+ * @since Mon Jan 04 2021
+ */
+class rt_pub
+{
 	std::list<pid_t> subscriber_pid_list;
-	int sig_type;
-	int index;
+	int const sig_type;
+	int const var_id;
+	static rt_pub *instance;
+
+	/**
+  * @brief 
+  * @param signal_type
+  * @param index
+  */
+	rt_pub(int const signal_type, int const index);
+
 public:
-	rt_pub(const rt_pub&) = delete;
-	rt_pub& operator =(const rt_pub&) = delete;
+	/**
+  * @brief 
+  * @param 
+  */
+	rt_pub(const rt_pub &) = delete;
 
-	rt_pub(int signal_type, uint32_t index) :
-			sig_type(signal_type), index(index) {
-	}
-	~rt_pub() {
-	}
-	void add_subscriber(pid_t pid) {
-		this->subscriber_pid_list.push_back(pid);
-	}
-	void remove_subscriber(pid_t pid) {
-		for (auto iter = subscriber_pid_list.begin();
-				iter != subscriber_pid_list.end(); iter++) {
-			if (*iter == pid) {
-				subscriber_pid_list.erase(iter);
-			}
-		}
-	}
+	/**
+  * @brief 
+  * @param 
+  * @return 
+  */
+	rt_pub &operator=(const rt_pub &) = delete;
 
-	void notify(uint32_t index) {
-		union sigval sig_val;
-		sig_val.sival_int = (int) index;
-		for (auto iter = subscriber_pid_list.begin();
-				iter != subscriber_pid_list.end(); iter++) {
-			sigqueue(*iter, this->sig_type, sig_val);
-		}
-	}
+	/**
+  * @brief 
+  */
+	~rt_pub();
+	/**
+  * @brief 
+  * @param signal_type
+  * @param index
+  * @return 
+  */
+	static rt_pub *init(int const  signal_type, int const  index);
+
+	/**
+  * @brief 
+  * @return 
+  */
+	static rt_pub *getInstance();
+
+	/**
+  * @brief 
+  * @param pid
+  * @return (void)
+  */
+	void add_subscriber(pid_t pid);
+
+	/**
+  * @brief 
+  * @param pid
+  * @return (void)
+  */
+	void remove_subscriber(pid_t pid);
+
+	/**
+  * @brief 
+  * @param index
+  * @return (void)
+  */
+	void notify();
 };
 
 
 
-class rt_sub {
-	typedef void (*sig_handler)(int signo, siginfo_t *info, void *extra);
+
+
+
+/**
+ * @brief 
+ * @author 
+ * @since Mon Jan 04 2021
+ */
+class rt_sub
+{
+public:
+	/**
+  * @brief 
+  * @param signo
+  * @param info
+  * @param extra
+  * @return 
+  */
+	using  sig_handler = void (*)(int signo, siginfo_t *info, void *extra);
+
+
+	/**
+  * @brief 
+  * @param 
+  */
+	rt_sub(const rt_sub &) = delete;
+	/**
+  * @brief 
+  * @param 
+  * @return 
+  */
+	rt_sub &operator=(const rt_sub &) = delete;
+
+	/**
+  * @brief 
+  */
+	~rt_sub();
+
+	/**
+  * @brief 
+  * @param signal_type
+  * @param signal_handler
+  * @return 
+  */
+	static rt_sub *init(int const signal_type, const sig_handler signal_handler = nullptr);
+
+	/**
+  * @brief 
+  * @return 
+  */
+	static rt_sub *getInstance();
+	/**
+  * @brief 
+  * @return (void)
+  */
+	void block();
+
+	/**
+  * @brief 
+  * @return (void)
+  */
+	void unblock();
+
+	/**
+  * @brief 
+  * @return (void)
+  */
+	void unblock_n_await() ;
+
+	/**
+  * @brief 
+  * @return (void)
+  */
+	void await();
+
 private:
+	const int sig_type;
+	const sig_handler handler;
 	sigset_t newmask;
 	sigset_t oldmask;
 	struct sigaction action;
-	int sig_type;
-	sig_handler handler;
-
-public:
-	rt_sub(const rt_sub&) = delete;
-	rt_sub& operator =(const rt_sub&) = delete;
-	rt_sub(int const signal_type, sig_handler signal_handler = NULL) :
-			sig_type(signal_type), handler(signal_handler) {
-		try {
-			if (this->handler == NULL) {
-				throw std::runtime_error("handler can't be null");
-			}
-			sigemptyset(&newmask);
-			sigaddset(&newmask, sig_type);
-			sigprocmask(SIG_BLOCK, &newmask, &oldmask);
-			action.sa_flags = SA_SIGINFO;
-			action.sa_sigaction = this->handler;
-			if (sigaction(sig_type, &action, NULL) == -1) {
-				throw std::runtime_error("Error during signal setup");
-			}
-
-		} catch (std::exception const &e) {
-			std::cout << "Exception: " << e.what() << "\n";
-		}
-	}
-
-	~rt_sub() {
-		sigprocmask(SIG_BLOCK, &newmask, &oldmask);
-		signal (this->sig_type, SIG_DFL);
-		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
-	}
-
-	void block(){
-		sigprocmask(SIG_BLOCK, &newmask, &oldmask);
-	}
-
-	void unblock(){
-		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
-	}
-
-	void unblock_n_await() {
-		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
-		sigsuspend(&oldmask);
-	}
-
-	void await(){
-		sigsuspend(&oldmask);
-	}
+	static rt_sub *instance;
+	/**
+ * @brief
+ * @param signal_type
+ * @param signal_handler
+ */
+	explicit rt_sub(int const signal_type, sig_handler signal_handler);
 };
 
 #endif /* RTPUBSUB_HPP_ */
