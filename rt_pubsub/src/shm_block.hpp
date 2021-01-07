@@ -1,5 +1,5 @@
-#ifndef SHM_HPP_
-#define SHM_HPP_
+#ifndef SHM_BLOCK_HPP_
+#define SHM_BLOCK_HPP_
 
 #include <iostream>
 #include <atomic>
@@ -13,21 +13,7 @@
 #include <exception>
 #include <shared_mutex>
 #include <stdexcept>
-
-
-using Lock = std::shared_timed_mutex;
-using WriteLock = std::unique_lock<Lock>;
-using ReadLock = std::shared_lock<Lock>;
-
-using dtype_t = enum {UNSIGNED8 = 0, UNSIGNED16, UNSIGNED32, UNSIGNED64, SIGNED8, SIGNED16, SIGNED32, SIGNED64, FLOAT32, FLOAT64};
-
-template <typename T> struct shm_variable_t
-{
-	const int index;
-	dtype_t type;
-	std::atomic<T> value;
-};
-
+#include "shm_variable.hpp"
 /**
  * @brief
  * @author
@@ -39,7 +25,6 @@ class shm_block {
 	unsigned int const size;
 	uint8_t *addr;
 	int mem_id;
-	Lock mem_lock;
 
 public:
 	shm_block(const shm_block&) = delete;
@@ -94,10 +79,13 @@ public:
 	 * @return
 	 */
 	template<typename T>
-	void read(shm_variable_t<T>& var) const {
-		T* ptr = (T*)(this->addr + var.index);
-		var.value.store(*ptr,std::memory_order_relaxed);
+	void read(const int& index,T& val) const {
+		volatile std::atomic<T> atm_var(0);
+		T* ptr = (T*)(this->addr + indices[index]->getoffset());
+		atm_var.store(*ptr,std::memory_order_relaxed);
+		val = atm_var.load(std::memory_order_relaxed);
 	}
+
 
 	/**
 	 * @brief
@@ -107,12 +95,28 @@ public:
 	 * @return
 	 */
 	template<typename T>
-	void write(shm_variable_t<T> &var) const {
-		T* ptr = (T*)(this->addr + var.index);
-		*ptr = (T) var.value.load(std::memory_order_relaxed);
+	void read(const int& index,volatile variable_t<T>& val) const {
+		T* ptr = (T*)(this->addr + indices[index]->getoffset());
+		val.store(*ptr,std::memory_order_relaxed);
+	}
+
+
+	/**
+	 * @brief
+	 * @param var
+	 * @param store_loc
+	 * @param store_len
+	 * @return
+	 */
+	template<typename T>
+	void write(const T& value, const int index) const {
+		volatile std::atomic<T> atm_var(value);
+		T* ptr = (T*)(this->addr + indices[index]->getoffset());
+		*ptr = atm_var.load(std::memory_order_relaxed);
 	}
 };
 
+extern shm_block var_space;
+extern shm_block proc_space;
 
-
-#endif /* SHM_HPP_ */
+#endif /* SHM_BLOCK_HPP_ */
