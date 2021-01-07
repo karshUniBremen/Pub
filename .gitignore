@@ -34,3 +34,7 @@
 rt_pubsub/.cproject
 rt_pubsub/.project
 rt_pubsub/.settings
+
+codegen/.idea/
+codegen/venv/
+benchmarking/.~lock.benchmarking.ods#

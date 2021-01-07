@@ -93,13 +93,13 @@ int main(int argc, char **argv) {
 	var_space.write<float>((const float&) 13, 0);
 	pub_0.notify();
 
-	for (auto i = 0; i < 1000000; i++) {
-		var_space.write<char>((const char&) i, 1);
+	for (auto i = 0; i < 100; i++) {
+		var_space.write<int8_t>((const char&) i, 1);
 		pub_1.notify();
 
 	}
 	//		benchmark_us.stop();
-	var_space.write<char>((const char&) 19, 2);
+	var_space.write<int8_t>((const uint16_t&) 19, 2);
 	pub_2.notify();
 	sleep(1);
 	}

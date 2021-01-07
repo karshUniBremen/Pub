@@ -5,6 +5,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <array>
+#include <atomic>
 
 using dtype_t = enum {UNSIGNED8 = 0, UNSIGNED16, UNSIGNED32, UNSIGNED64, SIGNED8, SIGNED16, SIGNED32, SIGNED64, FLOAT32, FLOAT64};
 
@@ -34,9 +35,6 @@ public:
 
 };
 
-extern std::array<variable_info*,3> indices;
-extern volatile variable_t<float> var_index_0;
-extern volatile variable_t<char> var_index_1;
-extern volatile variable_t<char> var_index_2;
+
 
 #endif /* SHM_VARIABLE_HPP_ */

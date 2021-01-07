@@ -1,0 +1,15 @@
+shared_memory:
+  variable_space_path: "/dev/shm/var"
+  variable_size: 1024
+  proc_space_path: "/dev/shm/proc"
+  proc_size: 128
+data_dictionary:
+- name: index_0
+  data_type: FLOAT32
+  value: 0.0
+- name: index_1
+  data_type: SIGNED8
+  value: 1
+- name: index_2
+  data_type: SIGNED8
+  value: 2
