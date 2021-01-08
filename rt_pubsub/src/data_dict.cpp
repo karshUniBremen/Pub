@@ -1,4 +1,5 @@
 //This file is generated, Please dont modify the content, Change config.yaml file and generate code
+#include "benchmark.hpp"
 #include "data_dict.hpp"
 #include "shm_block.hpp"
 #include <sys/types.h>
@@ -24,11 +25,13 @@ void rt_sub_handler(int signo, siginfo_t *info, void *extra)
 	{
 	case 0:
 		var_index_0.update();
+		benchmark_us.start();
 		break;
 	case 1:
 		var_index_1.update();
 		break;
 	case 2:
+		benchmark_us.stop();
 		var_index_2.update();
 		break;
 	}
