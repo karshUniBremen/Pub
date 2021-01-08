@@ -148,7 +148,7 @@ public:
 	}
 };
 
-extern shm_block var_space;	 /** variable space in shared memory */
-extern shm_block proc_space; /** process space in shared memory*/
+extern shm_block process_var_space;	 /** variable space in shared memory */
+extern shm_block service_var_space; /** process space in shared memory*/
 
 #endif /* SHM_BLOCK_HPP_ */

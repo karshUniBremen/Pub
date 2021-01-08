@@ -50,7 +50,7 @@ public:
 	 */
 	explicit variable_t(int const &index, int const signal_type, const uint32_t mem_offset, const dtype_t type_info) :
 			index { index }, pub { signal_type, index }, mem_offset { mem_offset }, type_info { type_info } {
-		var_space.write(this->mem_offset, value_store);
+		process_var_space.write(this->mem_offset, value_store);
 	}
 
 	/**
@@ -60,7 +60,7 @@ public:
 	 */
 	void write(const T &value) {
 		value_store.store(value);
-		var_space.write(this->mem_offset, value_store);
+		process_var_space.write(this->mem_offset, value_store);
 		pub.notify();
 	}
 
@@ -79,7 +79,7 @@ public:
 	 * @return (void)
 	 */
 	void update() {
-		var_space.read(this->mem_offset, value_store);
+		process_var_space.read(this->mem_offset, value_store);
 	}
 
 	/**
@@ -91,6 +91,7 @@ public:
 		pub.add_subscriber(pid);
 	}
 
+
 	/**
 	 * @brief removes subscriber from the subscriber list of the variable
 	 * @param pid process ID of the subscriber
@@ -99,6 +100,7 @@ public:
 	void remove_subscriber(const pid_t pid) {
 		pub.remove_subscriber(pid);
 	}
+
 
 	/**
 	 * @brief gets index value of the variable

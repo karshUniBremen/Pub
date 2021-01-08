@@ -42,8 +42,8 @@
 #include <sys/wait.h>
 #include <utility>
 
-shm_block var_space("/dev/shm/var",65,1024);
-shm_block proc_space("/dev/shm/proc",64,128);
+shm_block process_var_space("/dev/shm/var",65,1024);
+shm_block service_var_space("/dev/shm/proc",64,128);
 
 
 

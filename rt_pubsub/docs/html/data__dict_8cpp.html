@@ -92,10 +92,10 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a19c70a47a1e3d748e202348f5d5d3588"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshm__block.html">shm_block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__dict_8cpp.html#a19c70a47a1e3d748e202348f5d5d3588">var_space</a> (&quot;/dev/shm/var&quot;, 65, 1024)</td></tr>
-<tr class="separator:a19c70a47a1e3d748e202348f5d5d3588"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa6cae289c545c8ed8a15dca6ecbe04a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshm__block.html">shm_block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__dict_8cpp.html#afa6cae289c545c8ed8a15dca6ecbe04a">proc_space</a> (&quot;/dev/shm/proc&quot;, 64, 128)</td></tr>
-<tr class="separator:afa6cae289c545c8ed8a15dca6ecbe04a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59150fad3c5fa1288d43e1920e0cf2fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshm__block.html">shm_block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__dict_8cpp.html#a59150fad3c5fa1288d43e1920e0cf2fe">process_var_space</a> (&quot;/dev/shm/var&quot;, 65, 1024)</td></tr>
+<tr class="separator:a59150fad3c5fa1288d43e1920e0cf2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792bcca50e6a3c4fbb6f51e194b2115f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classshm__block.html">shm_block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__dict_8cpp.html#a792bcca50e6a3c4fbb6f51e194b2115f">service_var_space</a> (&quot;/dev/shm/proc&quot;, 64, 128)</td></tr>
+<tr class="separator:a792bcca50e6a3c4fbb6f51e194b2115f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37b9c9b9a82e5a46d51f49f4ceef821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvariable__t.html">variable_t</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__dict_8cpp.html#aa37b9c9b9a82e5a46d51f49f4ceef821">var_index_0</a> (0, SIGRTMIN+1, 0, dtype_t::FLOAT32)</td></tr>
 <tr class="separator:aa37b9c9b9a82e5a46d51f49f4ceef821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c21e1336e39eef880f469cf9e5b8371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvariable__t.html">variable_t</a>&lt; int8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__dict_8cpp.html#a1c21e1336e39eef880f469cf9e5b8371">var_index_1</a> (1, SIGRTMIN+1, 4, dtype_t::SIGNED8)</td></tr>
@@ -139,14 +139,28 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="afa6cae289c545c8ed8a15dca6ecbe04a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa6cae289c545c8ed8a15dca6ecbe04a">&#9670;&nbsp;</a></span>proc_space</h2>
+<a id="a59150fad3c5fa1288d43e1920e0cf2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59150fad3c5fa1288d43e1920e0cf2fe">&#9670;&nbsp;</a></span>process_var_space</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classshm__block.html">shm_block</a> proc_space(&quot;/dev/shm/proc&quot;, 64, 128)</td>
+          <td class="memname"><a class="el" href="classshm__block.html">shm_block</a> process_var_space(&quot;/dev/shm/var&quot;, 65, 1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a792bcca50e6a3c4fbb6f51e194b2115f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792bcca50e6a3c4fbb6f51e194b2115f">&#9670;&nbsp;</a></span>service_var_space</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classshm__block.html">shm_block</a> service_var_space(&quot;/dev/shm/proc&quot;, 64, 128)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,20 +204,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvariable__t.html">variable_t</a>&lt;int8_t&gt; var_index_2(2, SIGRTMIN+1, 5, dtype_t::SIGNED8)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a19c70a47a1e3d748e202348f5d5d3588"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19c70a47a1e3d748e202348f5d5d3588">&#9670;&nbsp;</a></span>var_space</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classshm__block.html">shm_block</a> var_space(&quot;/dev/shm/var&quot;, 65, 1024)</td>
         </tr>
       </table>
 </div><div class="memdoc">

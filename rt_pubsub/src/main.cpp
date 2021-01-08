@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <utility>
+#include <atomic>
 
 using namespace std;
 
@@ -33,7 +34,7 @@ int main(int argc, char **argv)
 		//This is a child process
 
 		//Create and initialize the subscriber
-		rt_sub *sub = rt_sub::init(SIGRTMIN + 1, rt_sub_handler);
+		rt_sub *sub = rt_sub::init(1, SIGRTMIN + 1, rt_sub_handler);
 		while (1)
 		{
 			// wait for signal to receive. This stop process from terminating
@@ -45,9 +46,14 @@ int main(int argc, char **argv)
 		sleep(1); // wait for subscriber to join
 
 		// Add subscriber to index 0,1,2 variables
-		var_index_0.add_subscriber(pid);
-		var_index_1.add_subscriber(pid);
-		var_index_2.add_subscriber(pid);
+		pid_t sub_1_pid {};
+		rt_pub::get_listener_info(1, sub_1_pid);
+
+		if(sub_1_pid == 0){
+			var_index_0.add_subscriber(sub_1_pid);
+			var_index_1.add_subscriber(sub_1_pid);
+			var_index_2.add_subscriber(sub_1_pid);
+		}
 
 		//Write data to shared memory and notify all subscriber of index 0
 		var_index_0.write(12.3);
@@ -59,7 +65,7 @@ int main(int argc, char **argv)
 		}
 
 		//Write data to shared memory and notify all subscriber of index 2
-		var_index_2.write(4);
+		var_index_2.write(9);
 
 		// Read latest
 		var_index_2.read(newValue);

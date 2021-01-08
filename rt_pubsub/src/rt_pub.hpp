@@ -86,6 +86,28 @@ public:
 			sigqueue(*iter, (int)this->sig_type, sig_val);
 		}
 	}
+
+//	/**
+//	 * @brief gets pid and status of the subscriber
+//	 * @param subscriber_id subscriber id
+//	 * @param pid process id of subscriber read from memory
+//	 * @param status
+//	 */
+//	static void get_listener_info(const uint32_t subscriber_id, pid_t& pid, uint8_t& status){
+//		uint32_t offset = subscriber_id*(sizeof(pid_t)+sizeof(uint8_t));
+//		service_var_space.read(offset, pid);
+//		service_var_space.read(offset+sizeof(pid_t), status);
+//	}
+
+	/**
+	 * @brief gets pid and status of the subscriber
+	 * @param subscriber_id subscriber id
+	 * @param pid process id of subscriber read from memory
+	 */
+	static void get_listener_info(const uint32_t subscriber_id, pid_t& pid){
+		uint32_t offset = subscriber_id*(sizeof(pid_t)+sizeof(uint8_t));
+		service_var_space.read(offset, pid);
+	}
 };
 
 #endif /* RT_PUB_HPP_ */

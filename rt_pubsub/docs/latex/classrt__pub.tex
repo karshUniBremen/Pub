@@ -26,6 +26,11 @@ void \mbox{\hyperlink{classrt__pub_a620196f83115bf8909a070e3b96ad668}{remove\+\_
 \begin{DoxyCompactList}\small\item\em remove subscriber from subscriber list of the publisher \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classrt__pub_a7bf0d32a9948311148139c88a772ce50}{notify}} ()
 \begin{DoxyCompactList}\small\item\em notify all subscriber \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classrt__pub_a3a495a912391aef9896c5961437ed8f3}{get\+\_\+listener\+\_\+info}} (const uint32\+\_\+t subscriber\+\_\+id, pid\+\_\+t \&pid)
+\begin{DoxyCompactList}\small\item\em gets pid and status of the subscriber \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -98,6 +103,23 @@ add subscriber to the subscriber list of the publisher
 \begin{DoxyReturn}{Returns}
 (void) 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classrt__pub_a3a495a912391aef9896c5961437ed8f3}\label{classrt__pub_a3a495a912391aef9896c5961437ed8f3}} 
+\index{rt\_pub@{rt\_pub}!get\_listener\_info@{get\_listener\_info}}
+\index{get\_listener\_info@{get\_listener\_info}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{get\_listener\_info()}{get\_listener\_info()}}
+{\footnotesize\ttfamily static void rt\+\_\+pub\+::get\+\_\+listener\+\_\+info (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{subscriber\+\_\+id,  }\item[{pid\+\_\+t \&}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+gets pid and status of the subscriber 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subscriber\+\_\+id} & subscriber id \\
+\hline
+{\em pid} & process id of subscriber read from memory \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classrt__pub_a7bf0d32a9948311148139c88a772ce50}\label{classrt__pub_a7bf0d32a9948311148139c88a772ce50}} 
 \index{rt\_pub@{rt\_pub}!notify@{notify}}
 \index{notify@{notify}!rt\_pub@{rt\_pub}}

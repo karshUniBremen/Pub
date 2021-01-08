@@ -20,4 +20,8 @@ digraph "src/rt_sub.hpp"
   Node8 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
   Node9 [label="exception",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="atomic",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="unistd.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

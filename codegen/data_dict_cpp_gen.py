@@ -25,8 +25,8 @@ def generate_data_dict_cpp(yaml_file_name):
                     proc_space_path = shm_mem["proc_space_path"]
                 if entry == "proc_size":
                     proc_space_size = shm_mem["proc_size"]
-            print('shm_block var_space("%s",65,%s);' %(var_space_path, var_space_size) )
-            print( 'shm_block proc_space("%s",64,%s);' % (proc_space_path, proc_space_size) )
+            print('shm_block process_var_space("%s",65,%s);' %(var_space_path, var_space_size) )
+            print( 'shm_block service_var_space("%s",64,%s);' % (proc_space_path, proc_space_size) )
             print( "\n\n" )
 
             # variables
