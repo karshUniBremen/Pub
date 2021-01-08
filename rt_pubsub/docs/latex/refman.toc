@@ -1,0 +1,107 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}rt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pub Class Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}rt\_pub()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}rt\_pub()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{6}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}$\sim $rt\_pub()}{6}{subsubsection.3.1.2.3}%
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}add\_subscriber()}{6}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}notify()}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}operator=()}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}remove\_subscriber()}{7}{subsubsection.3.1.3.4}%
+\contentsline {section}{\numberline {3.2}rt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sub Class Reference}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Member Typedef Documentation}{8}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}sig\_handler}{8}{subsubsection.3.2.2.1}%
+\contentsline {subsection}{\numberline {3.2.3}Constructor \& Destructor Documentation}{9}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}rt\_sub()}{9}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}$\sim $rt\_sub()}{9}{subsubsection.3.2.3.2}%
+\contentsline {subsection}{\numberline {3.2.4}Member Function Documentation}{9}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}await()}{9}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}block()}{10}{subsubsection.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}getInstance()}{10}{subsubsection.3.2.4.3}%
+\contentsline {subsubsection}{\numberline {3.2.4.4}init()}{10}{subsubsection.3.2.4.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.5}operator=()}{10}{subsubsection.3.2.4.5}%
+\contentsline {subsubsection}{\numberline {3.2.4.6}unblock()}{11}{subsubsection.3.2.4.6}%
+\contentsline {subsubsection}{\numberline {3.2.4.7}unblock\_n\_await()}{11}{subsubsection.3.2.4.7}%
+\contentsline {section}{\numberline {3.3}shm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}block Class Reference}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{12}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Constructor \& Destructor Documentation}{12}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}shm\_block()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}shm\_block()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}$\sim $shm\_block()}{12}{subsubsection.3.3.2.3}%
+\contentsline {subsection}{\numberline {3.3.3}Member Function Documentation}{13}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}operator=()}{13}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}read()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{13}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}read()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{13}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.4}write()}{14}{subsubsection.3.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.3.5}write\_()}{14}{subsubsection.3.3.3.5}%
+\contentsline {section}{\numberline {3.4}Timer Class Reference}{15}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Constructor \& Destructor Documentation}{15}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}Timer()}{15}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}$\sim $Timer()}{15}{subsubsection.3.4.1.2}%
+\contentsline {subsection}{\numberline {3.4.2}Member Function Documentation}{15}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}start()}{15}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}stop()}{15}{subsubsection.3.4.2.2}%
+\contentsline {section}{\numberline {3.5}variable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}info\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Class Reference}{16}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{16}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Constructor \& Destructor Documentation}{16}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}variable\_info\_t()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}variable\_info\_t()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{16}{subsubsection.3.5.2.2}%
+\contentsline {subsection}{\numberline {3.5.3}Member Function Documentation}{17}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.3.1}getindex()}{17}{subsubsection.3.5.3.1}%
+\contentsline {subsubsection}{\numberline {3.5.3.2}getoffset()}{17}{subsubsection.3.5.3.2}%
+\contentsline {subsubsection}{\numberline {3.5.3.3}getTypeInfo()}{17}{subsubsection.3.5.3.3}%
+\contentsline {subsubsection}{\numberline {3.5.3.4}operator=()}{18}{subsubsection.3.5.3.4}%
+\contentsline {section}{\numberline {3.6}variable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t$<$ T $>$ Class Template Reference}{18}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{18}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Constructor \& Destructor Documentation}{19}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}variable\_t()}{19}{subsubsection.3.6.2.1}%
+\contentsline {subsection}{\numberline {3.6.3}Member Function Documentation}{19}{subsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.3.1}add\_subscriber()}{19}{subsubsection.3.6.3.1}%
+\contentsline {subsubsection}{\numberline {3.6.3.2}read()}{19}{subsubsection.3.6.3.2}%
+\contentsline {subsubsection}{\numberline {3.6.3.3}remove\_subscriber()}{20}{subsubsection.3.6.3.3}%
+\contentsline {subsubsection}{\numberline {3.6.3.4}update()}{20}{subsubsection.3.6.3.4}%
+\contentsline {subsubsection}{\numberline {3.6.3.5}write()}{20}{subsubsection.3.6.3.5}%
+\contentsline {chapter}{\numberline {4}File Documentation}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}src/benchmark.hpp File Reference}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}src/data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dict.cpp File Reference}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Function Documentation}{24}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}rt\_sub\_handler()}{24}{subsubsection.4.2.1.1}%
+\contentsline {subsection}{\numberline {4.2.2}Variable Documentation}{24}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}indices}{24}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}info\_index\_0}{24}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}info\_index\_1}{24}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}info\_index\_2}{24}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}proc\_space}{24}{subsubsection.4.2.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.2.6}var\_index\_0}{25}{subsubsection.4.2.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.2.7}var\_index\_1}{25}{subsubsection.4.2.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.2.8}var\_index\_2}{25}{subsubsection.4.2.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.2.9}var\_space}{25}{subsubsection.4.2.2.9}%
+\contentsline {section}{\numberline {4.3}src/data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}dict.hpp File Reference}{25}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Function Documentation}{25}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}rt\_sub\_handler()}{26}{subsubsection.4.3.1.1}%
+\contentsline {subsection}{\numberline {4.3.2}Variable Documentation}{26}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}var\_index\_0}{26}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}var\_index\_1}{26}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}var\_index\_2}{26}{subsubsection.4.3.2.3}%
+\contentsline {section}{\numberline {4.4}src/main.cpp File Reference}{26}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Function Documentation}{27}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}main()}{27}{subsubsection.4.4.1.1}%
+\contentsline {section}{\numberline {4.5}src/rt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pub.hpp File Reference}{28}{section.4.5}%
+\contentsline {section}{\numberline {4.6}src/rt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sub.hpp File Reference}{28}{section.4.6}%
+\contentsline {section}{\numberline {4.7}src/shm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}block.hpp File Reference}{29}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Variable Documentation}{29}{subsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.1.1}indices}{29}{subsubsection.4.7.1.1}%
+\contentsline {subsubsection}{\numberline {4.7.1.2}proc\_space}{29}{subsubsection.4.7.1.2}%
+\contentsline {subsubsection}{\numberline {4.7.1.3}var\_space}{29}{subsubsection.4.7.1.3}%
+\contentsline {section}{\numberline {4.8}src/shm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}variable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}info\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t.hpp File Reference}{30}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Typedef Documentation}{30}{subsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.1.1}dtype\_t}{30}{subsubsection.4.8.1.1}%
+\contentsline {section}{\numberline {4.9}src/shm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}variables.hpp File Reference}{30}{section.4.9}%

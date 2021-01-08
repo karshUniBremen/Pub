@@ -77,9 +77,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a68d65543e7d2c597da254117a28af1df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvariable__t.html#a68d65543e7d2c597da254117a28af1df">variable_t</a> (int const &amp;index, int const signal_type)</td></tr>
-<tr class="memdesc:a68d65543e7d2c597da254117a28af1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="classvariable__t.html#a68d65543e7d2c597da254117a28af1df">More...</a><br /></td></tr>
-<tr class="separator:a68d65543e7d2c597da254117a28af1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac698ffbf822d55b7dc652c70c0d9f7de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvariable__t.html#ac698ffbf822d55b7dc652c70c0d9f7de">variable_t</a> (int const &amp;index, int const signal_type, const uint32_t mem_offset, const <a class="el" href="shm__variables_8hpp.html#a998137995d1a3091701143f4f0560228">dtype_t</a> type_info)</td></tr>
+<tr class="memdesc:ac698ffbf822d55b7dc652c70c0d9f7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="classvariable__t.html#ac698ffbf822d55b7dc652c70c0d9f7de">More...</a><br /></td></tr>
+<tr class="separator:ac698ffbf822d55b7dc652c70c0d9f7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5f590839920377a21e393c1e8f7f169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvariable__t.html#aa5f590839920377a21e393c1e8f7f169">write</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:aa5f590839920377a21e393c1e8f7f169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data into shared memory and notifies all subscriber.  <a href="classvariable__t.html#aa5f590839920377a21e393c1e8f7f169">More...</a><br /></td></tr>
 <tr class="separator:aa5f590839920377a21e393c1e8f7f169"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -95,6 +95,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9adfc72f63b0914a6df1c2979f8ceff5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvariable__t.html#a9adfc72f63b0914a6df1c2979f8ceff5">remove_subscriber</a> (const pid_t pid)</td></tr>
 <tr class="memdesc:a9adfc72f63b0914a6df1c2979f8ceff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes subscriber from the subscriber list of the variable  <a href="classvariable__t.html#a9adfc72f63b0914a6df1c2979f8ceff5">More...</a><br /></td></tr>
 <tr class="separator:a9adfc72f63b0914a6df1c2979f8ceff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48750ed59aacf8eb99465d7876218535"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvariable__t.html#a48750ed59aacf8eb99465d7876218535">getindex</a> () const</td></tr>
+<tr class="memdesc:a48750ed59aacf8eb99465d7876218535"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets index value of the variable  <a href="classvariable__t.html#a48750ed59aacf8eb99465d7876218535">More...</a><br /></td></tr>
+<tr class="separator:a48750ed59aacf8eb99465d7876218535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2175c75b1496c9926d5fc5d7b2657bb"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvariable__t.html#ab2175c75b1496c9926d5fc5d7b2657bb">getoffset</a> () const</td></tr>
+<tr class="memdesc:ab2175c75b1496c9926d5fc5d7b2657bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets offset value of memory location from shared memory's base address  <a href="classvariable__t.html#ab2175c75b1496c9926d5fc5d7b2657bb">More...</a><br /></td></tr>
+<tr class="separator:ab2175c75b1496c9926d5fc5d7b2657bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d211186b561df601bc123ea127f4b4"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvariable__t.html#a53d211186b561df601bc123ea127f4b4">getTypeInfo</a> ()</td></tr>
+<tr class="memdesc:a53d211186b561df601bc123ea127f4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets data type information of the variable  <a href="classvariable__t.html#a53d211186b561df601bc123ea127f4b4">More...</a><br /></td></tr>
+<tr class="separator:a53d211186b561df601bc123ea127f4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
@@ -104,8 +113,8 @@ class variable_t&lt; T &gt;</h3>
 <dl class="section author"><dt>Author</dt><dd>Karthik </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>Fri Jan 08 2021 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a68d65543e7d2c597da254117a28af1df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68d65543e7d2c597da254117a28af1df">&#9670;&nbsp;</a></span>variable_t()</h2>
+<a id="ac698ffbf822d55b7dc652c70c0d9f7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac698ffbf822d55b7dc652c70c0d9f7de">&#9670;&nbsp;</a></span>variable_t()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,7 +134,19 @@ template&lt;class T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int const&#160;</td>
-          <td class="paramname"><em>signal_type</em>&#160;</td>
+          <td class="paramname"><em>signal_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>mem_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="shm__variables_8hpp.html#a998137995d1a3091701143f4f0560228">dtype_t</a>&#160;</td>
+          <td class="paramname"><em>type_info</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -186,6 +207,96 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>(void) </dd></dl>
+
+</div>
+</div>
+<a id="a48750ed59aacf8eb99465d7876218535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48750ed59aacf8eb99465d7876218535">&#9670;&nbsp;</a></span>getindex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classvariable__t.html">variable_t</a>&lt; T &gt;::getindex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>gets index value of the variable </p>
+<dl class="section return"><dt>Returns</dt><dd>index value in int </dd></dl>
+
+</div>
+</div>
+<a id="ab2175c75b1496c9926d5fc5d7b2657bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2175c75b1496c9926d5fc5d7b2657bb">&#9670;&nbsp;</a></span>getoffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t <a class="el" href="classvariable__t.html">variable_t</a>&lt; T &gt;::getoffset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>gets offset value of memory location from shared memory's base address </p>
+<dl class="section return"><dt>Returns</dt><dd>mem_offset value in uint32_t </dd></dl>
+
+</div>
+</div>
+<a id="a53d211186b561df601bc123ea127f4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d211186b561df601bc123ea127f4b4">&#9670;&nbsp;</a></span>getTypeInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t <a class="el" href="classvariable__t.html">variable_t</a>&lt; T &gt;::getTypeInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>gets data type information of the variable </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t type value which enumerated by dtype_t </dd></dl>
 
 </div>
 </div>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shm__variables_8hpp">
+<title>src/shm_variables.hpp File Reference</title>
+<indexterm><primary>src/shm_variables.hpp</primary></indexterm>
+<programlisting>#include &quot;shm_block.hpp&quot;
+#include &quot;rt_pub.hpp&quot;
+#include &lt;stddef.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;atomic&gt;
+</programlisting>Include dependency graph for shm_variables.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="shm__variables_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="shm__variables_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classvariable__t">variable_t&lt; T &gt;</link></para>
+
+<para>Data dictionary variable type. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

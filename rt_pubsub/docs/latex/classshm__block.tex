@@ -1,0 +1,185 @@
+\hypertarget{classshm__block}{}\doxysection{shm\+\_\+block Class Reference}
+\label{classshm__block}\index{shm\_block@{shm\_block}}
+
+
+shared memory block class  
+
+
+
+
+{\ttfamily \#include $<$shm\+\_\+block.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classshm__block_a3dac40f5ff8de6d4fd3d05d856a337d1}{shm\+\_\+block}} (const \mbox{\hyperlink{classshm__block}{shm\+\_\+block}} \&)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor is deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshm__block}{shm\+\_\+block}} \& \mbox{\hyperlink{classshm__block_af2243f96740db0ef62058cafb2cb1407}{operator=}} (const \mbox{\hyperlink{classshm__block}{shm\+\_\+block}} \&)=delete
+\begin{DoxyCompactList}\small\item\em assignment operator is deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshm__block_a8944ec9bf48979e1d2f90b17462f16a1}{shm\+\_\+block}} (const char $\ast$const name, unsigned int const block\+\_\+id, unsigned int const block\+\_\+size)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classshm__block_ad6c833b366e66c9618e1c83be12e1347}{$\sim$shm\+\_\+block}} () noexcept
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classshm__block_afa24256bcb8e52ab51709eca77131740}{read}} (const uint32\+\_\+t \&offset, T \&val) const
+\begin{DoxyCompactList}\small\item\em reads value from shared memory location of specified index variable \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classshm__block_ad52de0854bfe79b7af44957aa86f1ad3}{read}} (const uint32\+\_\+t \&offset, volatile std\+::atomic$<$ T $>$ \&val) const
+\begin{DoxyCompactList}\small\item\em reads value from shared memory location of specified index variable \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classshm__block_a3ca87a0fd946ca70604893649ca57ffa}{write}} (const uint32\+\_\+t \&offset, const T \&value) const
+\begin{DoxyCompactList}\small\item\em write data to shared memory of variable with specified index \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classshm__block_af1d5a2967a3b4d31b9a7c19ef40a0fcb}{write\+\_\+}} (const uint32\+\_\+t \&offset, std\+::atomic$<$ T $>$ \&value) const
+\begin{DoxyCompactList}\small\item\em write data to shared memory of variable with specified index \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+shared memory block class 
+
+\begin{DoxyAuthor}{Author}
+karthik 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+Mon Jan 04 2021 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshm__block_a3dac40f5ff8de6d4fd3d05d856a337d1}\label{classshm__block_a3dac40f5ff8de6d4fd3d05d856a337d1}} 
+\index{shm\_block@{shm\_block}!shm\_block@{shm\_block}}
+\index{shm\_block@{shm\_block}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{shm\_block()}{shm\_block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shm\+\_\+block\+::shm\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshm__block}{shm\+\_\+block}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+copy constructor is deleted 
+
+\mbox{\Hypertarget{classshm__block_a8944ec9bf48979e1d2f90b17462f16a1}\label{classshm__block_a8944ec9bf48979e1d2f90b17462f16a1}} 
+\index{shm\_block@{shm\_block}!shm\_block@{shm\_block}}
+\index{shm\_block@{shm\_block}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{shm\_block()}{shm\_block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shm\+\_\+block\+::shm\+\_\+block (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{name,  }\item[{unsigned int const}]{block\+\_\+id,  }\item[{unsigned int const}]{block\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & user defined name to the shared memory \\
+\hline
+{\em block\+\_\+id} & user defined ID to the shared memory \\
+\hline
+{\em block\+\_\+size} & size of the shared memory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classshm__block_ad6c833b366e66c9618e1c83be12e1347}\label{classshm__block_ad6c833b366e66c9618e1c83be12e1347}} 
+\index{shm\_block@{shm\_block}!````~shm\_block@{$\sim$shm\_block}}
+\index{````~shm\_block@{$\sim$shm\_block}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{$\sim$shm\_block()}{~shm\_block()}}
+{\footnotesize\ttfamily shm\+\_\+block\+::$\sim$shm\+\_\+block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+destructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshm__block_af2243f96740db0ef62058cafb2cb1407}\label{classshm__block_af2243f96740db0ef62058cafb2cb1407}} 
+\index{shm\_block@{shm\_block}!operator=@{operator=}}
+\index{operator=@{operator=}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshm__block}{shm\+\_\+block}}\& shm\+\_\+block\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshm__block}{shm\+\_\+block}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+assignment operator is deleted 
+
+\mbox{\Hypertarget{classshm__block_afa24256bcb8e52ab51709eca77131740}\label{classshm__block_afa24256bcb8e52ab51709eca77131740}} 
+\index{shm\_block@{shm\_block}!read@{read}}
+\index{read@{read}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void shm\+\_\+block\+::read (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{offset,  }\item[{T \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+reads value from shared memory location of specified index variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the variable \\
+\hline
+{\em val} & variable in which read value is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classshm__block_ad52de0854bfe79b7af44957aa86f1ad3}\label{classshm__block_ad52de0854bfe79b7af44957aa86f1ad3}} 
+\index{shm\_block@{shm\_block}!read@{read}}
+\index{read@{read}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void shm\+\_\+block\+::read (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{offset,  }\item[{volatile std\+::atomic$<$ T $>$ \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+reads value from shared memory location of specified index variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the variable \\
+\hline
+{\em val} & atomic variable in which read value is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classshm__block_a3ca87a0fd946ca70604893649ca57ffa}\label{classshm__block_a3ca87a0fd946ca70604893649ca57ffa}} 
+\index{shm\_block@{shm\_block}!write@{write}}
+\index{write@{write}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void shm\+\_\+block\+::write (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{offset,  }\item[{const T \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+write data to shared memory of variable with specified index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the variable \\
+\hline
+{\em value} & value to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classshm__block_af1d5a2967a3b4d31b9a7c19ef40a0fcb}\label{classshm__block_af1d5a2967a3b4d31b9a7c19ef40a0fcb}} 
+\index{shm\_block@{shm\_block}!write\_@{write\_}}
+\index{write\_@{write\_}!shm\_block@{shm\_block}}
+\doxysubsubsection{\texorpdfstring{write\_()}{write\_()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void shm\+\_\+block\+::write\+\_\+ (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{offset,  }\item[{std\+::atomic$<$ T $>$ \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+write data to shared memory of variable with specified index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index index of the variable \\
+\hline
+{\em value} & atomic variable containing value to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{shm__block_8hpp}{shm\+\_\+block.\+hpp}}\end{DoxyCompactItemize}

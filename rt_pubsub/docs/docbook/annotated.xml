@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_classrt__pub">rt_pub</link>
+<para>Real-time publisher </para>
+<link linkend="_classrt__sub">rt_sub</link>
+<para>Real-time subscriber </para>
+<link linkend="_classshm__block">shm_block</link>
+<para>Shared memory block class </para>
+<link linkend="_classTimer">Timer</link><link linkend="_classvariable__info__t">variable_info_t</link>
+<para>Variable information type </para>
+<link linkend="_classvariable__t">variable_t&lt; T &gt;</link>
+<para>Data dictionary variable type </para>
+</section>

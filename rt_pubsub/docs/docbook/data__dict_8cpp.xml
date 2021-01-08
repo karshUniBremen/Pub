@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_data__dict_8cpp">
+<title>src/data_dict.cpp File Reference</title>
+<indexterm><primary>src/data_dict.cpp</primary></indexterm>
+<programlisting>#include &quot;benchmark.hpp&quot;
+#include &quot;data_dict.hpp&quot;
+#include &quot;shm_block.hpp&quot;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;utility&gt;
+</programlisting>Include dependency graph for data_dict.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="data__dict_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_data__dict_8cpp_1a8cc8cb9e09035acd150b4dd53f15e0a2">rt_sub_handler</link> (int signo, siginfo_t *info, void *extra)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classshm__block">shm_block</link> <link linkend="_data__dict_8cpp_1a19c70a47a1e3d748e202348f5d5d3588">var_space</link> (&quot;/dev/shm/var&quot;, 65, 1024)</para>
+</listitem>
+            <listitem><para><link linkend="_classshm__block">shm_block</link> <link linkend="_data__dict_8cpp_1afa6cae289c545c8ed8a15dca6ecbe04a">proc_space</link> (&quot;/dev/shm/proc&quot;, 64, 128)</para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__t">variable_t</link>&lt; float &gt; <link linkend="_data__dict_8cpp_1a188bceb1bd0483cd7c472e3d67251d4c">var_index_0</link> (0, SIGRTMIN+1)</para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__info__t">variable_info_t</link> <link linkend="_data__dict_8cpp_1a74a75f2ceb548db67fa9585165b92b06">info_index_0</link> (0, 0, dtype_t::FLOAT32)</para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__t">variable_t</link>&lt; int8_t &gt; <link linkend="_data__dict_8cpp_1a2b0004f50628cc268cea20724f3a1f37">var_index_1</link> (1, SIGRTMIN+1)</para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__info__t">variable_info_t</link> <link linkend="_data__dict_8cpp_1afddb8c0c4d8de76ee10d0992501d20f8">info_index_1</link> (1, 4, dtype_t::SIGNED8)</para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__t">variable_t</link>&lt; int8_t &gt; <link linkend="_data__dict_8cpp_1ab0b6f84a4825d1e6e2d46b57f3edc8f3">var_index_2</link> (2, SIGRTMIN+1)</para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__info__t">variable_info_t</link> <link linkend="_data__dict_8cpp_1a7fc6f1bb21f4a6269436a0c673842891">info_index_2</link> (2, 5, dtype_t::SIGNED8)</para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__info__t">variable_info_t</link> * <link linkend="_data__dict_8cpp_1a6e124713143a483904bc3c52b87d1e5c">indices</link> [3] = {&amp;<link linkend="_data__dict_8cpp_1a74a75f2ceb548db67fa9585165b92b06">info_index_0</link>, &amp;<link linkend="_data__dict_8cpp_1afddb8c0c4d8de76ee10d0992501d20f8">info_index_1</link>, &amp;<link linkend="_data__dict_8cpp_1a7fc6f1bb21f4a6269436a0c673842891">info_index_2</link>}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_data__dict_8cpp_1a8cc8cb9e09035acd150b4dd53f15e0a2"/>    <section>
+    <title>rt_sub_handler()</title>
+<indexterm><primary>rt_sub_handler</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>rt_sub_handler</secondary></indexterm>
+<para><computeroutput>void rt_sub_handler (int signo, siginfo_t * info, void * extra)</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_data__dict_8cpp_1a6e124713143a483904bc3c52b87d1e5c"/>    <section>
+    <title>indices</title>
+<indexterm><primary>indices</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>indices</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__info__t">variable_info_t</link>* indices[3] = {&amp;<link linkend="_data__dict_8cpp_1a74a75f2ceb548db67fa9585165b92b06">info_index_0</link>, &amp;<link linkend="_data__dict_8cpp_1afddb8c0c4d8de76ee10d0992501d20f8">info_index_1</link>, &amp;<link linkend="_data__dict_8cpp_1a7fc6f1bb21f4a6269436a0c673842891">info_index_2</link>}</computeroutput></para>    </section><anchor xml:id="_data__dict_8cpp_1a74a75f2ceb548db67fa9585165b92b06"/>    <section>
+    <title>info_index_0</title>
+<indexterm><primary>info_index_0</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>info_index_0</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__info__t">variable_info_t</link> info_index_0(0, 0, dtype_t::FLOAT32)</computeroutput></para>    </section><anchor xml:id="_data__dict_8cpp_1afddb8c0c4d8de76ee10d0992501d20f8"/>    <section>
+    <title>info_index_1</title>
+<indexterm><primary>info_index_1</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>info_index_1</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__info__t">variable_info_t</link> info_index_1(1, 4, dtype_t::SIGNED8)</computeroutput></para>    </section><anchor xml:id="_data__dict_8cpp_1a7fc6f1bb21f4a6269436a0c673842891"/>    <section>
+    <title>info_index_2</title>
+<indexterm><primary>info_index_2</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>info_index_2</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__info__t">variable_info_t</link> info_index_2(2, 5, dtype_t::SIGNED8)</computeroutput></para>    </section><anchor xml:id="_data__dict_8cpp_1afa6cae289c545c8ed8a15dca6ecbe04a"/>    <section>
+    <title>proc_space</title>
+<indexterm><primary>proc_space</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>proc_space</secondary></indexterm>
+<para><computeroutput><link linkend="_classshm__block">shm_block</link> proc_space(&quot;/dev/shm/proc&quot;, 64, 128)</computeroutput></para>
+<para>variable space in shared memory </para>
+    </section><anchor xml:id="_data__dict_8cpp_1a188bceb1bd0483cd7c472e3d67251d4c"/>    <section>
+    <title>var_index_0</title>
+<indexterm><primary>var_index_0</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>var_index_0</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__t">variable_t</link>&lt;float&gt; var_index_0(0, SIGRTMIN+1)</computeroutput></para>    </section><anchor xml:id="_data__dict_8cpp_1a2b0004f50628cc268cea20724f3a1f37"/>    <section>
+    <title>var_index_1</title>
+<indexterm><primary>var_index_1</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>var_index_1</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__t">variable_t</link>&lt;int8_t&gt; var_index_1(1, SIGRTMIN+1)</computeroutput></para>    </section><anchor xml:id="_data__dict_8cpp_1ab0b6f84a4825d1e6e2d46b57f3edc8f3"/>    <section>
+    <title>var_index_2</title>
+<indexterm><primary>var_index_2</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>var_index_2</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__t">variable_t</link>&lt;int8_t&gt; var_index_2(2, SIGRTMIN+1)</computeroutput></para>    </section><anchor xml:id="_data__dict_8cpp_1a19c70a47a1e3d748e202348f5d5d3588"/>    <section>
+    <title>var_space</title>
+<indexterm><primary>var_space</primary><secondary>data_dict.cpp</secondary></indexterm>
+<indexterm><primary>data_dict.cpp</primary><secondary>var_space</secondary></indexterm>
+<para><computeroutput><link linkend="_classshm__block">shm_block</link> var_space(&quot;/dev/shm/var&quot;, 65, 1024)</computeroutput></para></section>
+</section>
+</section>

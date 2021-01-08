@@ -7,9 +7,12 @@ data_dictionary:
 - name: index_0
   data_type: FLOAT32
   value: 0.0
+  signal: 'SIGRTMIN + 1'
 - name: index_1
   data_type: SIGNED8
   value: 1
+  signal: 'SIGRTMIN + 1'
 - name: index_2
   data_type: SIGNED8
   value: 2
+  signal: "SIGRTMIN + 1"

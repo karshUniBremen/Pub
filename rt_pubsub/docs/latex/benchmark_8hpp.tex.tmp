@@ -1,0 +1,25 @@
+\hypertarget{benchmark_8hpp}{}\doxysection{src/benchmark.hpp File Reference}
+\label{benchmark_8hpp}\index{src/benchmark.hpp@{src/benchmark.hpp}}
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for benchmark.\+hpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTimer}{Timer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTimer}{Timer}} \mbox{\hyperlink{benchmark_8hpp_aecd5cdac370875bd9adbf1c31a803a65}{benchmark\+\_\+us}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{benchmark_8hpp_aecd5cdac370875bd9adbf1c31a803a65}\label{benchmark_8hpp_aecd5cdac370875bd9adbf1c31a803a65}} 
+\index{benchmark.hpp@{benchmark.hpp}!benchmark\_us@{benchmark\_us}}
+\index{benchmark\_us@{benchmark\_us}!benchmark.hpp@{benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{benchmark\_us}{benchmark\_us}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTimer}{Timer}} benchmark\+\_\+us}
+

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rt__sub_8hpp">
+<title>src/rt_sub.hpp File Reference</title>
+<indexterm><primary>src/rt_sub.hpp</primary></indexterm>
+<programlisting>#include &lt;stddef.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;list&gt;
+#include &lt;stdexcept&gt;
+#include &lt;iostream&gt;
+#include &lt;exception&gt;
+</programlisting>Include dependency graph for rt_sub.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="rt__sub_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="rt__sub_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classrt__sub">rt_sub</link></para>
+
+<para>real-time subscriber </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

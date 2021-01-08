@@ -75,41 +75,42 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classTimer.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTimer.html">Timer</a>{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classTimer.html#a5f16e8da27d2a5a5242dead46de05d97">    8</a></span>&#160;<a class="code" href="classTimer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a>():m_StartTimepoint{}{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classTimer.html#a14fa469c4c295c5fa6e66a4ad1092146">   11</a></span>&#160;<a class="code" href="classTimer.html#a14fa469c4c295c5fa6e66a4ad1092146">~Timer</a>(){</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">start</a>(){</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    m_StartTimepoint = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classTimer.html#a63f0eb44b27402196590a03781515dba">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classTimer.html#a63f0eb44b27402196590a03781515dba">stop</a>(){</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">auto</span> endTimepoint = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">auto</span>  <a class="code" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">start</a>= std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(m_StartTimepoint).time_since_epoch().count();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">auto</span> end = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(endTimepoint).time_since_epoch().count();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">auto</span> duration = end - <a class="code" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">start</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//  double ms = duration * 0.001;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::clog&lt;&lt;duration&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt; m_StartTimepoint;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}<a class="code" href="benchmark_8hpp.html#aecd5cdac370875bd9adbf1c31a803a65">benchmark_us</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="benchmark_8hpp.html#aecd5cdac370875bd9adbf1c31a803a65">   31</a></span>&#160;<span class="keyword">extern</span> <a class="code" href="classTimer.html">Timer</a> <a class="code" href="benchmark_8hpp.html#aecd5cdac370875bd9adbf1c31a803a65">benchmark_us</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BENCHMARK_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classTimer.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTimer.html">Timer</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt; m_StartTimepoint;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classTimer.html#a5f16e8da27d2a5a5242dead46de05d97">    9</a></span>&#160;    <a class="code" href="classTimer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer</a>() :</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            m_StartTimepoint { } {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classTimer.html#a14fa469c4c295c5fa6e66a4ad1092146">   13</a></span>&#160;    <a class="code" href="classTimer.html#a14fa469c4c295c5fa6e66a4ad1092146">~Timer</a>() {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">   16</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">start</a>() {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        m_StartTimepoint = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classTimer.html#ad7ff5335fcdd78b5b561912909906525">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTimer.html#ad7ff5335fcdd78b5b561912909906525">stop</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">auto</span> endTimepoint = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> <a class="code" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">start</a> = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(m_StartTimepoint).time_since_epoch().count();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> end = std::chrono::time_point_cast&lt;std::chrono::microseconds&gt;(endTimepoint).time_since_epoch().count();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">auto</span> <span class="keyword">const</span> duration = end - <a class="code" href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">start</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//  double ms = duration * 0.001;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::clog &lt;&lt; duration &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="benchmark_8hpp.html#aecd5cdac370875bd9adbf1c31a803a65">   32</a></span>&#160;<a class="code" href="classTimer.html">Timer</a> <a class="code" href="benchmark_8hpp.html#aecd5cdac370875bd9adbf1c31a803a65">benchmark_us</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BENCHMARK_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassTimer_html_a14fa469c4c295c5fa6e66a4ad1092146"><div class="ttname"><a href="classTimer.html#a14fa469c4c295c5fa6e66a4ad1092146">Timer::~Timer</a></div><div class="ttdeci">~Timer()</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:11</div></div>
+<div class="ttc" id="aclassTimer_html_a14fa469c4c295c5fa6e66a4ad1092146"><div class="ttname"><a href="classTimer.html#a14fa469c4c295c5fa6e66a4ad1092146">Timer::~Timer</a></div><div class="ttdeci">~Timer()</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:13</div></div>
+<div class="ttc" id="aclassTimer_html_ad7ff5335fcdd78b5b561912909906525"><div class="ttname"><a href="classTimer.html#ad7ff5335fcdd78b5b561912909906525">Timer::stop</a></div><div class="ttdeci">void stop() const</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:20</div></div>
 <div class="ttc" id="aclassTimer_html"><div class="ttname"><a href="classTimer.html">Timer</a></div><div class="ttdef"><b>Definition:</b> benchmark.hpp:6</div></div>
-<div class="ttc" id="abenchmark_8hpp_html_aecd5cdac370875bd9adbf1c31a803a65"><div class="ttname"><a href="benchmark_8hpp.html#aecd5cdac370875bd9adbf1c31a803a65">benchmark_us</a></div><div class="ttdeci">class Timer benchmark_us</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:31</div></div>
-<div class="ttc" id="aclassTimer_html_a3a8b5272198d029779dc9302a54305a8"><div class="ttname"><a href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">Timer::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:14</div></div>
-<div class="ttc" id="aclassTimer_html_a5f16e8da27d2a5a5242dead46de05d97"><div class="ttname"><a href="classTimer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer::Timer</a></div><div class="ttdeci">Timer()</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:8</div></div>
-<div class="ttc" id="aclassTimer_html_a63f0eb44b27402196590a03781515dba"><div class="ttname"><a href="classTimer.html#a63f0eb44b27402196590a03781515dba">Timer::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:18</div></div>
+<div class="ttc" id="abenchmark_8hpp_html_aecd5cdac370875bd9adbf1c31a803a65"><div class="ttname"><a href="benchmark_8hpp.html#aecd5cdac370875bd9adbf1c31a803a65">benchmark_us</a></div><div class="ttdeci">Timer benchmark_us</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:32</div></div>
+<div class="ttc" id="aclassTimer_html_a3a8b5272198d029779dc9302a54305a8"><div class="ttname"><a href="classTimer.html#a3a8b5272198d029779dc9302a54305a8">Timer::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:16</div></div>
+<div class="ttc" id="aclassTimer_html_a5f16e8da27d2a5a5242dead46de05d97"><div class="ttname"><a href="classTimer.html#a5f16e8da27d2a5a5242dead46de05d97">Timer::Timer</a></div><div class="ttdeci">Timer()</div><div class="ttdef"><b>Definition:</b> benchmark.hpp:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

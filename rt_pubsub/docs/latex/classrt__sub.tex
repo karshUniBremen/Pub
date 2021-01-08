@@ -1,0 +1,202 @@
+\hypertarget{classrt__sub}{}\doxysection{rt\+\_\+sub Class Reference}
+\label{classrt__sub}\index{rt\_sub@{rt\_sub}}
+
+
+real-\/time subscriber  
+
+
+
+
+{\ttfamily \#include $<$rt\+\_\+sub.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classrt__sub_ae37615566385ad224c3f67fa70da4853}{sig\+\_\+handler}} = void($\ast$)(int signo, siginfo\+\_\+t $\ast$info, void $\ast$extra)
+\begin{DoxyCompactList}\small\item\em signal handler function type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrt__sub_a8fa65c579b681cabc3d61b92c2cf78f2}{rt\+\_\+sub}} (const \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}} \&)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}} \& \mbox{\hyperlink{classrt__sub_a3b6a6ee884f2d6eb9788f987906ebb32}{operator=}} (const \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}} \&)=delete
+\begin{DoxyCompactList}\small\item\em assignment operator deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrt__sub_a30dd6a4cdb7d01f917161da3340ace07}{$\sim$rt\+\_\+sub}} ()
+\begin{DoxyCompactList}\small\item\em destrucor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrt__sub_a7cd37300ae81ef14bf85cfd81b69ba15}{block}} ()
+\begin{DoxyCompactList}\small\item\em blocks the signals \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrt__sub_a20d45cd3eb63793e08140bd3c0adff8f}{unblock}} ()
+\begin{DoxyCompactList}\small\item\em unblocks the signal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrt__sub_a0615733188069fe154821d22cbe345d7}{unblock\+\_\+n\+\_\+await}} ()
+\begin{DoxyCompactList}\small\item\em unblocks and awaits for the signal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrt__sub_a990bc4f69883eb69f4db8c30f23bfe18}{await}} ()
+\begin{DoxyCompactList}\small\item\em awaits for the signal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}} $\ast$ \mbox{\hyperlink{classrt__sub_adb77125f0bc147d53b17a55531831f13}{init}} (int const signal\+\_\+type, const \mbox{\hyperlink{classrt__sub_ae37615566385ad224c3f67fa70da4853}{sig\+\_\+handler}} signal\+\_\+handler)
+\begin{DoxyCompactList}\small\item\em initialization \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}} $\ast$ \mbox{\hyperlink{classrt__sub_a8da9c00283f74253c35dd3d27b52685f}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em gets instance of the subscriber \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+real-\/time subscriber 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+Mon Jan 04 2021 
+\end{DoxySince}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrt__sub_ae37615566385ad224c3f67fa70da4853}\label{classrt__sub_ae37615566385ad224c3f67fa70da4853}} 
+\index{rt\_sub@{rt\_sub}!sig\_handler@{sig\_handler}}
+\index{sig\_handler@{sig\_handler}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{sig\_handler}{sig\_handler}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classrt__sub_ae37615566385ad224c3f67fa70da4853}{rt\+\_\+sub\+::sig\+\_\+handler}} =  void ($\ast$)(int signo, siginfo\+\_\+t $\ast$info, void $\ast$extra)}
+
+
+
+signal handler function type 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signo} & signal number \\
+\hline
+{\em info} & signal information \\
+\hline
+{\em extra} & extra \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrt__sub_a8fa65c579b681cabc3d61b92c2cf78f2}\label{classrt__sub_a8fa65c579b681cabc3d61b92c2cf78f2}} 
+\index{rt\_sub@{rt\_sub}!rt\_sub@{rt\_sub}}
+\index{rt\_sub@{rt\_sub}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{rt\_sub()}{rt\_sub()}}
+{\footnotesize\ttfamily rt\+\_\+sub\+::rt\+\_\+sub (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+copy constructor deleted 
+
+\mbox{\Hypertarget{classrt__sub_a30dd6a4cdb7d01f917161da3340ace07}\label{classrt__sub_a30dd6a4cdb7d01f917161da3340ace07}} 
+\index{rt\_sub@{rt\_sub}!````~rt\_sub@{$\sim$rt\_sub}}
+\index{````~rt\_sub@{$\sim$rt\_sub}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{$\sim$rt\_sub()}{~rt\_sub()}}
+{\footnotesize\ttfamily rt\+\_\+sub\+::$\sim$rt\+\_\+sub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+destrucor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrt__sub_a990bc4f69883eb69f4db8c30f23bfe18}\label{classrt__sub_a990bc4f69883eb69f4db8c30f23bfe18}} 
+\index{rt\_sub@{rt\_sub}!await@{await}}
+\index{await@{await}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{await()}{await()}}
+{\footnotesize\ttfamily void rt\+\_\+sub\+::await (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+awaits for the signal 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrt__sub_a7cd37300ae81ef14bf85cfd81b69ba15}\label{classrt__sub_a7cd37300ae81ef14bf85cfd81b69ba15}} 
+\index{rt\_sub@{rt\_sub}!block@{block}}
+\index{block@{block}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}}
+{\footnotesize\ttfamily void rt\+\_\+sub\+::block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+blocks the signals 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrt__sub_a8da9c00283f74253c35dd3d27b52685f}\label{classrt__sub_a8da9c00283f74253c35dd3d27b52685f}} 
+\index{rt\_sub@{rt\_sub}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}}$\ast$ rt\+\_\+sub\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+gets instance of the subscriber 
+
+\begin{DoxyReturn}{Returns}
+pointers to the subscriber instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrt__sub_adb77125f0bc147d53b17a55531831f13}\label{classrt__sub_adb77125f0bc147d53b17a55531831f13}} 
+\index{rt\_sub@{rt\_sub}!init@{init}}
+\index{init@{init}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}}$\ast$ rt\+\_\+sub\+::init (\begin{DoxyParamCaption}\item[{int const}]{signal\+\_\+type,  }\item[{const \mbox{\hyperlink{classrt__sub_ae37615566385ad224c3f67fa70da4853}{sig\+\_\+handler}}}]{signal\+\_\+handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+initialization 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+\_\+type} & signal value to be registered \\
+\hline
+{\em signal\+\_\+handler} & signal handler to be attached \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrt__sub_a3b6a6ee884f2d6eb9788f987906ebb32}\label{classrt__sub_a3b6a6ee884f2d6eb9788f987906ebb32}} 
+\index{rt\_sub@{rt\_sub}!operator=@{operator=}}
+\index{operator=@{operator=}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}}\& rt\+\_\+sub\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrt__sub}{rt\+\_\+sub}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+assignment operator deleted 
+
+\mbox{\Hypertarget{classrt__sub_a20d45cd3eb63793e08140bd3c0adff8f}\label{classrt__sub_a20d45cd3eb63793e08140bd3c0adff8f}} 
+\index{rt\_sub@{rt\_sub}!unblock@{unblock}}
+\index{unblock@{unblock}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{unblock()}{unblock()}}
+{\footnotesize\ttfamily void rt\+\_\+sub\+::unblock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+unblocks the signal 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrt__sub_a0615733188069fe154821d22cbe345d7}\label{classrt__sub_a0615733188069fe154821d22cbe345d7}} 
+\index{rt\_sub@{rt\_sub}!unblock\_n\_await@{unblock\_n\_await}}
+\index{unblock\_n\_await@{unblock\_n\_await}!rt\_sub@{rt\_sub}}
+\doxysubsubsection{\texorpdfstring{unblock\_n\_await()}{unblock\_n\_await()}}
+{\footnotesize\ttfamily void rt\+\_\+sub\+::unblock\+\_\+n\+\_\+await (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+unblocks and awaits for the signal 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{rt__sub_8hpp}{rt\+\_\+sub.\+hpp}}\end{DoxyCompactItemize}

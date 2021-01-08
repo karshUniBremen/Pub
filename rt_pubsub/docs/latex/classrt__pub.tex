@@ -1,0 +1,146 @@
+\hypertarget{classrt__pub}{}\doxysection{rt\+\_\+pub Class Reference}
+\label{classrt__pub}\index{rt\_pub@{rt\_pub}}
+
+
+real-\/time publisher  
+
+
+
+
+{\ttfamily \#include $<$rt\+\_\+pub.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrt__pub_a4ec67f68573b7bd89fe39efac8ea29dc}{rt\+\_\+pub}} (const \mbox{\hyperlink{classrt__pub}{rt\+\_\+pub}} \&)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrt__pub}{rt\+\_\+pub}} \& \mbox{\hyperlink{classrt__pub_a39d462ef24ebc02d38d7aa3ae670214d}{operator=}} (const \mbox{\hyperlink{classrt__pub}{rt\+\_\+pub}} \&)=delete
+\begin{DoxyCompactList}\small\item\em assignment operator deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrt__pub_aabd1b3b178f0aefa9ef0c1e04f9284ce}{rt\+\_\+pub}} (int const signal\+\_\+type, int const var\+\_\+id)
+\begin{DoxyCompactList}\small\item\em constructor of real-\/time publisher \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrt__pub_abada18c0ad7a80d4024983d791f9d984}{$\sim$rt\+\_\+pub}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrt__pub_a110e5315dfcedc4e1242317f323fea9a}{add\+\_\+subscriber}} (const pid\+\_\+t pid)
+\begin{DoxyCompactList}\small\item\em add subscriber to the subscriber list of the publisher \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrt__pub_a620196f83115bf8909a070e3b96ad668}{remove\+\_\+subscriber}} (const pid\+\_\+t pid)
+\begin{DoxyCompactList}\small\item\em remove subscriber from subscriber list of the publisher \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrt__pub_a7bf0d32a9948311148139c88a772ce50}{notify}} ()
+\begin{DoxyCompactList}\small\item\em notify all subscriber \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+real-\/time publisher 
+
+\begin{DoxyAuthor}{Author}
+karthik 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+Mon Jan 04 2021 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrt__pub_a4ec67f68573b7bd89fe39efac8ea29dc}\label{classrt__pub_a4ec67f68573b7bd89fe39efac8ea29dc}} 
+\index{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}}
+\index{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{rt\_pub()}{rt\_pub()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rt\+\_\+pub\+::rt\+\_\+pub (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrt__pub}{rt\+\_\+pub}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+copy constructor deleted 
+
+\mbox{\Hypertarget{classrt__pub_aabd1b3b178f0aefa9ef0c1e04f9284ce}\label{classrt__pub_aabd1b3b178f0aefa9ef0c1e04f9284ce}} 
+\index{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}}
+\index{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{rt\_pub()}{rt\_pub()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rt\+\_\+pub\+::rt\+\_\+pub (\begin{DoxyParamCaption}\item[{int const}]{signal\+\_\+type,  }\item[{int const}]{var\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor of real-\/time publisher 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+\_\+type} & Linux signal number \\
+\hline
+{\em index} & index variable to which publisher belongs \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrt__pub_abada18c0ad7a80d4024983d791f9d984}\label{classrt__pub_abada18c0ad7a80d4024983d791f9d984}} 
+\index{rt\_pub@{rt\_pub}!````~rt\_pub@{$\sim$rt\_pub}}
+\index{````~rt\_pub@{$\sim$rt\_pub}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{$\sim$rt\_pub()}{~rt\_pub()}}
+{\footnotesize\ttfamily rt\+\_\+pub\+::$\sim$rt\+\_\+pub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+destructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrt__pub_a110e5315dfcedc4e1242317f323fea9a}\label{classrt__pub_a110e5315dfcedc4e1242317f323fea9a}} 
+\index{rt\_pub@{rt\_pub}!add\_subscriber@{add\_subscriber}}
+\index{add\_subscriber@{add\_subscriber}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{add\_subscriber()}{add\_subscriber()}}
+{\footnotesize\ttfamily void rt\+\_\+pub\+::add\+\_\+subscriber (\begin{DoxyParamCaption}\item[{const pid\+\_\+t}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+add subscriber to the subscriber list of the publisher 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & process id of the subscriber \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrt__pub_a7bf0d32a9948311148139c88a772ce50}\label{classrt__pub_a7bf0d32a9948311148139c88a772ce50}} 
+\index{rt\_pub@{rt\_pub}!notify@{notify}}
+\index{notify@{notify}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void rt\+\_\+pub\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+notify all subscriber 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrt__pub_a39d462ef24ebc02d38d7aa3ae670214d}\label{classrt__pub_a39d462ef24ebc02d38d7aa3ae670214d}} 
+\index{rt\_pub@{rt\_pub}!operator=@{operator=}}
+\index{operator=@{operator=}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrt__pub}{rt\+\_\+pub}}\& rt\+\_\+pub\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrt__pub}{rt\+\_\+pub}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+assignment operator deleted 
+
+\mbox{\Hypertarget{classrt__pub_a620196f83115bf8909a070e3b96ad668}\label{classrt__pub_a620196f83115bf8909a070e3b96ad668}} 
+\index{rt\_pub@{rt\_pub}!remove\_subscriber@{remove\_subscriber}}
+\index{remove\_subscriber@{remove\_subscriber}!rt\_pub@{rt\_pub}}
+\doxysubsubsection{\texorpdfstring{remove\_subscriber()}{remove\_subscriber()}}
+{\footnotesize\ttfamily void rt\+\_\+pub\+::remove\+\_\+subscriber (\begin{DoxyParamCaption}\item[{const pid\+\_\+t}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+remove subscriber from subscriber list of the publisher 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & process id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{rt__pub_8hpp}{rt\+\_\+pub.\+hpp}}\end{DoxyCompactItemize}

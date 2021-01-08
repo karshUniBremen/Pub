@@ -13,57 +13,39 @@ def generate_data_dict_cpp(yaml_file_name):
             note_str =  ' //This file is generated, Please dont modify the content, Change config.yaml file and generate code\n'
             print(note_str)
 
-            header_str = '#ifndef DATA_DICT_HPP_ \n#define DATA_DICT_HPP_ \n#include "shm_variable.hpp" \n '
+            header_str = '#ifndef DATA_DICT_HPP_ \n#define DATA_DICT_HPP_ \n#include "shm_variables.hpp" \n '
             print(header_str)
+            print("\n")
 
-            variable_count = 0
-            for entry in enumerate( dd ):
-                variable_count += 1
-
-            indices_str = "extern std::array<variable_info*," + str( variable_count ) + "> indices;"
-            print(indices_str)
+            handler_str = "extern void rt_sub_handler(int signo, siginfo_t *info, void *extra);"
+            print(handler_str)
+            print("\n")
 
             for idx,entry in enumerate(dd):
+                var_name = entry["name"]
                 if entry["data_type"] == "SIGNED8":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<int8_t> var_%s;' % var_name )
+                    print( 'extern  variable_t<int8_t> var_%s;' % var_name )
                 if entry["data_type"] == "SIGNED16":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<int16_t> var_%s;' % var_name )
+                    print( 'extern  variable_t<int16_t> var_%s;' % var_name )
                 if entry["data_type"] == "SIGNED32":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<int32_t> var_%s;' % var_name )
+                    print( 'extern  variable_t<int32_t> var_%s;' % var_name )
                 if entry["data_type"] == "SIGNED64":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<int64_t> var_%s;' % var_name)
+                    print( 'extern  variable_t<int64_t> var_%s;' % var_name)
                 if entry["data_type"] == "UNSIGNED8":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<uint8_t> var_%s;' % var_name)
+                    print( 'extern  variable_t<uint8_t> var_%s;' % var_name)
                 if entry["data_type"] == "UNSIGNED16":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<uint16_t> var_%s;' % var_name)
+                    print( 'extern  variable_t<uint16_t> var_%s;' % var_name)
                 if entry["data_type"] == "UNSIGNED32":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<uint32_t> var_%s;' % var_name)
+                    print( 'extern  variable_t<uint32_t> var_%s;' % var_name)
                 if entry["data_type"] == "UNSIGNED64":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<uint64_t> var_%s;' % var_name)
+                    print( 'extern  variable_t<uint64_t> var_%s;' % var_name)
                 if entry["data_type"] == "FLOAT32":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<float> var_%s;' % var_name)
+                    print( 'extern  variable_t<float> var_%s;' % var_name)
                 if entry["data_type"] == "FLOAT64":
-                    var_name = entry["name"]
-                    var_value = entry["value"]
-                    print( 'extern volatile variable_t<double> var_%s;' % var_name)
+                    print( 'extern  variable_t<double> var_%s;' % var_name)
 
+            print( "\n")
             print( "#endif" )
+
+
 generate_data_dict_cpp("./config.yaml")

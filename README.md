@@ -22,7 +22,9 @@ Status : Alpha , Compiles and Run
 
 #### <u>Code generator</u>
 
+cog -d -e -o data_dict.hpp data_dict_hpp_gen.txt
 
+cog -d -e -o data_dict.cpp data_dict_cpp_gen.txt
 
 #### <u>Build</u>
 

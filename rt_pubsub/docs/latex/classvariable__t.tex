@@ -1,0 +1,207 @@
+\hypertarget{classvariable__t}{}\doxysection{variable\+\_\+t$<$ T $>$ Class Template Reference}
+\label{classvariable__t}\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+
+
+Data dictionary variable type.  
+
+
+
+
+{\ttfamily \#include $<$shm\+\_\+variables.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvariable__t_ac698ffbf822d55b7dc652c70c0d9f7de}{variable\+\_\+t}} (int const \&index, int const signal\+\_\+type, const uint32\+\_\+t mem\+\_\+offset, const \mbox{\hyperlink{shm__variables_8hpp_a998137995d1a3091701143f4f0560228}{dtype\+\_\+t}} type\+\_\+info)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvariable__t_aa5f590839920377a21e393c1e8f7f169}{write}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Writes data into shared memory and notifies all subscriber. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvariable__t_a43516fec7499db2a7e6f86a421a76106}{read}} (T \&value)
+\begin{DoxyCompactList}\small\item\em reads data from shared memory \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvariable__t_af35fbc1e02c39e0e840e49cf02b639f1}{update}} ()
+\begin{DoxyCompactList}\small\item\em updates value store of the variable from shared memory (called inside signal handler only) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvariable__t_aa6597d6c023ebb85c12ff4cd36755347}{add\+\_\+subscriber}} (const pid\+\_\+t pid)
+\begin{DoxyCompactList}\small\item\em adds subscriber to the variable subscriber list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvariable__t_a9adfc72f63b0914a6df1c2979f8ceff5}{remove\+\_\+subscriber}} (const pid\+\_\+t pid)
+\begin{DoxyCompactList}\small\item\em removes subscriber from the subscriber list of the variable \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classvariable__t_a48750ed59aacf8eb99465d7876218535}{getindex}} () const
+\begin{DoxyCompactList}\small\item\em gets index value of the variable \end{DoxyCompactList}\item 
+const uint32\+\_\+t \mbox{\hyperlink{classvariable__t_ab2175c75b1496c9926d5fc5d7b2657bb}{getoffset}} () const
+\begin{DoxyCompactList}\small\item\em gets offset value of memory location from shared memory\textquotesingle{}s base address \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{classvariable__t_a53d211186b561df601bc123ea127f4b4}{get\+Type\+Info}} ()
+\begin{DoxyCompactList}\small\item\em gets data type information of the variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class variable\+\_\+t$<$ T $>$}
+
+Data dictionary variable type. 
+
+\begin{DoxyAuthor}{Author}
+Karthik 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+Fri Jan 08 2021 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvariable__t_ac698ffbf822d55b7dc652c70c0d9f7de}\label{classvariable__t_ac698ffbf822d55b7dc652c70c0d9f7de}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!variable\_t@{variable\_t}}
+\index{variable\_t@{variable\_t}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{variable\_t()}{variable\_t()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::\mbox{\hyperlink{classvariable__t}{variable\+\_\+t}} (\begin{DoxyParamCaption}\item[{int const \&}]{index,  }\item[{int const}]{signal\+\_\+type,  }\item[{const uint32\+\_\+t}]{mem\+\_\+offset,  }\item[{const \mbox{\hyperlink{shm__variables_8hpp_a998137995d1a3091701143f4f0560228}{dtype\+\_\+t}}}]{type\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index value of the variable \\
+\hline
+{\em signal\+\_\+type} & Linux signal value \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classvariable__t_aa6597d6c023ebb85c12ff4cd36755347}\label{classvariable__t_aa6597d6c023ebb85c12ff4cd36755347}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!add\_subscriber@{add\_subscriber}}
+\index{add\_subscriber@{add\_subscriber}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add\_subscriber()}{add\_subscriber()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::add\+\_\+subscriber (\begin{DoxyParamCaption}\item[{const pid\+\_\+t}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+adds subscriber to the variable subscriber list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & process ID of the subscriber \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__t_a48750ed59aacf8eb99465d7876218535}\label{classvariable__t_a48750ed59aacf8eb99465d7876218535}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!getindex@{getindex}}
+\index{getindex@{getindex}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getindex()}{getindex()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const int \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::getindex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets index value of the variable 
+
+\begin{DoxyReturn}{Returns}
+index value in int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__t_ab2175c75b1496c9926d5fc5d7b2657bb}\label{classvariable__t_ab2175c75b1496c9926d5fc5d7b2657bb}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!getoffset@{getoffset}}
+\index{getoffset@{getoffset}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getoffset()}{getoffset()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::getoffset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets offset value of memory location from shared memory\textquotesingle{}s base address 
+
+\begin{DoxyReturn}{Returns}
+mem\+\_\+offset value in uint32\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__t_a53d211186b561df601bc123ea127f4b4}\label{classvariable__t_a53d211186b561df601bc123ea127f4b4}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!getTypeInfo@{getTypeInfo}}
+\index{getTypeInfo@{getTypeInfo}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getTypeInfo()}{getTypeInfo()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const uint8\+\_\+t \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::get\+Type\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets data type information of the variable 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t type value which enumerated by dtype\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__t_a43516fec7499db2a7e6f86a421a76106}\label{classvariable__t_a43516fec7499db2a7e6f86a421a76106}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!read@{read}}
+\index{read@{read}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::read (\begin{DoxyParamCaption}\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+reads data from shared memory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & value read from value store (not from shared memory) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__t_a9adfc72f63b0914a6df1c2979f8ceff5}\label{classvariable__t_a9adfc72f63b0914a6df1c2979f8ceff5}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!remove\_subscriber@{remove\_subscriber}}
+\index{remove\_subscriber@{remove\_subscriber}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove\_subscriber()}{remove\_subscriber()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::remove\+\_\+subscriber (\begin{DoxyParamCaption}\item[{const pid\+\_\+t}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+removes subscriber from the subscriber list of the variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & process ID of the subscriber \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__t_af35fbc1e02c39e0e840e49cf02b639f1}\label{classvariable__t_af35fbc1e02c39e0e840e49cf02b639f1}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!update@{update}}
+\index{update@{update}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+updates value store of the variable from shared memory (called inside signal handler only) 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__t_aa5f590839920377a21e393c1e8f7f169}\label{classvariable__t_aa5f590839920377a21e393c1e8f7f169}} 
+\index{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!write@{write}}
+\index{write@{write}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ T $>$\+::write (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes data into shared memory and notifies all subscriber. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & value to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{shm__variables_8hpp}{shm\+\_\+variables.\+hpp}}\end{DoxyCompactItemize}

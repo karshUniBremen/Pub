@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvariable__info__t">
+<title>variable_info_t Class Reference</title>
+<indexterm><primary>variable_info_t</primary></indexterm>
+<para>
+
+<para>variable information type </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;shm_variable_info_t.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvariable__info__t_1afc95cea73e8afd1cd8e7fa8398f9d367">variable_info_t</link> (const <link linkend="_classvariable__info__t">variable_info_t</link> &amp;)=delete</para>
+
+<para>copy constructor is deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__info__t">variable_info_t</link> &amp; <link linkend="_classvariable__info__t_1a15e688d0922fc7b9df4c13f56b327311">operator=</link> (const <link linkend="_classvariable__info__t">variable_info_t</link> &amp;)=delete</para>
+
+<para>asignment operator is deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classvariable__info__t_1a2a4a3468dac4b4c2aeb9456a214fb29d">variable_info_t</link> (const int index, const uint32_t mem_offset, const <link linkend="_shm__variable__info__t_8hpp_1a4d1cea158340a74679cbbc5f3929ea08">dtype_t</link> type_info)</para>
+
+<para>constructor </para>
+</listitem>
+            <listitem><para>const int <link linkend="_classvariable__info__t_1a978fbe7b5c4035790d6de6a482b0b93e">getindex</link> () const</para>
+
+<para>gets index value of the variable </para>
+</listitem>
+            <listitem><para>const uint32_t <link linkend="_classvariable__info__t_1ae33a6858acfc2becdd08f12d1eb53b1d">getoffset</link> () const</para>
+
+<para>gets offset value of memory location from shared memory&apos;s base address </para>
+</listitem>
+            <listitem><para>const uint8_t <link linkend="_classvariable__info__t_1a23161d9ae8119744d4696bfba00af3d8">getTypeInfo</link> ()</para>
+
+<para>gets data type information of the variable </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>variable information type </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>karthik </para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>Fri Jan 08 2021 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvariable__info__t_1afc95cea73e8afd1cd8e7fa8398f9d367"/>    <section>
+    <title>variable_info_t()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>variable_info_t</primary><secondary>variable_info_t</secondary></indexterm>
+<indexterm><primary>variable_info_t</primary><secondary>variable_info_t</secondary></indexterm>
+<para><computeroutput>variable_info_t::variable_info_t (const <link linkend="_classvariable__info__t">variable_info_t</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>copy constructor is deleted </para>
+</para>
+    </section><anchor xml:id="_classvariable__info__t_1a2a4a3468dac4b4c2aeb9456a214fb29d"/>    <section>
+    <title>variable_info_t()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>variable_info_t</primary><secondary>variable_info_t</secondary></indexterm>
+<indexterm><primary>variable_info_t</primary><secondary>variable_info_t</secondary></indexterm>
+<para><computeroutput>variable_info_t::variable_info_t (const int index, const uint32_t mem_offset, const <link linkend="_shm__variable__info__t_8hpp_1a4d1cea158340a74679cbbc5f3929ea08">dtype_t</link> type_info)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>constructor </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>index value of the variable </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mem_offset</entry>
+                                <entry>
+<para>memory offset from base address of the shared memory </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>type_info</entry>
+                                <entry>
+<para>data type information (enumerated to dtype_t) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>See also</title>
+
+<para><link linkend="_shm__variable__info__t_8hpp_1a4d1cea158340a74679cbbc5f3929ea08">dtype_t</link> </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classvariable__info__t_1a978fbe7b5c4035790d6de6a482b0b93e"/>    <section>
+    <title>getindex()</title>
+<indexterm><primary>getindex</primary><secondary>variable_info_t</secondary></indexterm>
+<indexterm><primary>variable_info_t</primary><secondary>getindex</secondary></indexterm>
+<para><computeroutput>const int variable_info_t::getindex ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>gets index value of the variable </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>index value in int </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classvariable__info__t_1ae33a6858acfc2becdd08f12d1eb53b1d"/>    <section>
+    <title>getoffset()</title>
+<indexterm><primary>getoffset</primary><secondary>variable_info_t</secondary></indexterm>
+<indexterm><primary>variable_info_t</primary><secondary>getoffset</secondary></indexterm>
+<para><computeroutput>const uint32_t variable_info_t::getoffset ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>gets offset value of memory location from shared memory&apos;s base address </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>mem_offset value in uint32_t </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classvariable__info__t_1a23161d9ae8119744d4696bfba00af3d8"/>    <section>
+    <title>getTypeInfo()</title>
+<indexterm><primary>getTypeInfo</primary><secondary>variable_info_t</secondary></indexterm>
+<indexterm><primary>variable_info_t</primary><secondary>getTypeInfo</secondary></indexterm>
+<para><computeroutput>const uint8_t variable_info_t::getTypeInfo ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>gets data type information of the variable </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>uint8_t type value which enumerated by dtype_t </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classvariable__info__t_1a15e688d0922fc7b9df4c13f56b327311"/>    <section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>variable_info_t</secondary></indexterm>
+<indexterm><primary>variable_info_t</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__info__t">variable_info_t</link>&amp; variable_info_t::operator= (const <link linkend="_classvariable__info__t">variable_info_t</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>asignment operator is deleted </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_shm__variable__info__t_8hpp">shm_variable_info_t.hpp</link></section>
+</section>

@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrt__sub">
+<title>rt_sub Class Reference</title>
+<indexterm><primary>rt_sub</primary></indexterm>
+<para>
+
+<para>real-time subscriber </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;rt_sub.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classrt__sub_1ae37615566385ad224c3f67fa70da4853">sig_handler</link> = void(*)(int signo, siginfo_t *info, void *extra)</para>
+
+<para>signal handler function type </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrt__sub_1a8fa65c579b681cabc3d61b92c2cf78f2">rt_sub</link> (const <link linkend="_classrt__sub">rt_sub</link> &amp;)=delete</para>
+
+<para>copy constructor deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classrt__sub">rt_sub</link> &amp; <link linkend="_classrt__sub_1a3b6a6ee884f2d6eb9788f987906ebb32">operator=</link> (const <link linkend="_classrt__sub">rt_sub</link> &amp;)=delete</para>
+
+<para>assignment operator deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classrt__sub_1a30dd6a4cdb7d01f917161da3340ace07">~rt_sub</link> ()</para>
+
+<para>destrucor </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrt__sub_1a7cd37300ae81ef14bf85cfd81b69ba15">block</link> ()</para>
+
+<para>blocks the signals </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrt__sub_1a20d45cd3eb63793e08140bd3c0adff8f">unblock</link> ()</para>
+
+<para>unblocks the signal </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrt__sub_1a0615733188069fe154821d22cbe345d7">unblock_n_await</link> ()</para>
+
+<para>unblocks and awaits for the signal </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrt__sub_1a990bc4f69883eb69f4db8c30f23bfe18">await</link> ()</para>
+
+<para>awaits for the signal </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classrt__sub">rt_sub</link> * <link linkend="_classrt__sub_1adb77125f0bc147d53b17a55531831f13">init</link> (int const signal_type, const <link linkend="_classrt__sub_1ae37615566385ad224c3f67fa70da4853">sig_handler</link> signal_handler)</para>
+
+<para>initialization </para>
+</listitem>
+            <listitem><para>static <link linkend="_classrt__sub">rt_sub</link> * <link linkend="_classrt__sub_1a8da9c00283f74253c35dd3d27b52685f">getInstance</link> ()</para>
+
+<para>gets instance of the subscriber </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>real-time subscriber </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para></para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>Mon Jan 04 2021 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classrt__sub_1ae37615566385ad224c3f67fa70da4853"/>    <section>
+    <title>sig_handler</title>
+<indexterm><primary>sig_handler</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>sig_handler</secondary></indexterm>
+<para><computeroutput>using <link linkend="_classrt__sub_1ae37615566385ad224c3f67fa70da4853">rt_sub::sig_handler</link> =  void (*)(int signo, siginfo_t *info, void *extra)</computeroutput></para><para>
+
+<para>signal handler function type </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>signo</entry>
+                                <entry>
+<para>signal number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>info</entry>
+                                <entry>
+<para>signal information </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>extra</entry>
+                                <entry>
+<para>extra </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrt__sub_1a8fa65c579b681cabc3d61b92c2cf78f2"/>    <section>
+    <title>rt_sub()</title>
+<indexterm><primary>rt_sub</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>rt_sub</secondary></indexterm>
+<para><computeroutput>rt_sub::rt_sub (const <link linkend="_classrt__sub">rt_sub</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>copy constructor deleted </para>
+</para>
+    </section><anchor xml:id="_classrt__sub_1a30dd6a4cdb7d01f917161da3340ace07"/>    <section>
+    <title>~rt_sub()</title>
+<indexterm><primary>~rt_sub</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>~rt_sub</secondary></indexterm>
+<para><computeroutput>rt_sub::~rt_sub ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>destrucor </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrt__sub_1a990bc4f69883eb69f4db8c30f23bfe18"/>    <section>
+    <title>await()</title>
+<indexterm><primary>await</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>await</secondary></indexterm>
+<para><computeroutput>void rt_sub::await ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>awaits for the signal </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classrt__sub_1a7cd37300ae81ef14bf85cfd81b69ba15"/>    <section>
+    <title>block()</title>
+<indexterm><primary>block</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>block</secondary></indexterm>
+<para><computeroutput>void rt_sub::block ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>blocks the signals </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classrt__sub_1a8da9c00283f74253c35dd3d27b52685f"/>    <section>
+    <title>getInstance()</title>
+<indexterm><primary>getInstance</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>getInstance</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classrt__sub">rt_sub</link>* rt_sub::getInstance ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>gets instance of the subscriber </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>pointers to the subscriber instance </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classrt__sub_1adb77125f0bc147d53b17a55531831f13"/>    <section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classrt__sub">rt_sub</link>* rt_sub::init (int const signal_type, const <link linkend="_classrt__sub_1ae37615566385ad224c3f67fa70da4853">sig_handler</link> signal_handler)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>initialization </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>signal_type</entry>
+                                <entry>
+<para>signal value to be registered </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>signal_handler</entry>
+                                <entry>
+<para>signal handler to be attached </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classrt__sub_1a3b6a6ee884f2d6eb9788f987906ebb32"/>    <section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_classrt__sub">rt_sub</link>&amp; rt_sub::operator= (const <link linkend="_classrt__sub">rt_sub</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>assignment operator deleted </para>
+</para>
+    </section><anchor xml:id="_classrt__sub_1a20d45cd3eb63793e08140bd3c0adff8f"/>    <section>
+    <title>unblock()</title>
+<indexterm><primary>unblock</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>unblock</secondary></indexterm>
+<para><computeroutput>void rt_sub::unblock ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>unblocks the signal </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classrt__sub_1a0615733188069fe154821d22cbe345d7"/>    <section>
+    <title>unblock_n_await()</title>
+<indexterm><primary>unblock_n_await</primary><secondary>rt_sub</secondary></indexterm>
+<indexterm><primary>rt_sub</primary><secondary>unblock_n_await</secondary></indexterm>
+<para><computeroutput>void rt_sub::unblock_n_await ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>unblocks and awaits for the signal </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_rt__sub_8hpp">rt_sub.hpp</link></section>
+</section>

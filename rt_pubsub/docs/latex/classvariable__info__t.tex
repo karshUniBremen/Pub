@@ -1,0 +1,129 @@
+\hypertarget{classvariable__info__t}{}\doxysection{variable\+\_\+info\+\_\+t Class Reference}
+\label{classvariable__info__t}\index{variable\_info\_t@{variable\_info\_t}}
+
+
+variable information type  
+
+
+
+
+{\ttfamily \#include $<$shm\+\_\+variable\+\_\+info\+\_\+t.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvariable__info__t_afc95cea73e8afd1cd8e7fa8398f9d367}{variable\+\_\+info\+\_\+t}} (const \mbox{\hyperlink{classvariable__info__t}{variable\+\_\+info\+\_\+t}} \&)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor is deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvariable__info__t}{variable\+\_\+info\+\_\+t}} \& \mbox{\hyperlink{classvariable__info__t_a15e688d0922fc7b9df4c13f56b327311}{operator=}} (const \mbox{\hyperlink{classvariable__info__t}{variable\+\_\+info\+\_\+t}} \&)=delete
+\begin{DoxyCompactList}\small\item\em asignment operator is deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvariable__info__t_a2a4a3468dac4b4c2aeb9456a214fb29d}{variable\+\_\+info\+\_\+t}} (const int index, const uint32\+\_\+t mem\+\_\+offset, const \mbox{\hyperlink{shm__variable__info__t_8hpp_a4d1cea158340a74679cbbc5f3929ea08}{dtype\+\_\+t}} type\+\_\+info)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classvariable__info__t_a978fbe7b5c4035790d6de6a482b0b93e}{getindex}} () const
+\begin{DoxyCompactList}\small\item\em gets index value of the variable \end{DoxyCompactList}\item 
+const uint32\+\_\+t \mbox{\hyperlink{classvariable__info__t_ae33a6858acfc2becdd08f12d1eb53b1d}{getoffset}} () const
+\begin{DoxyCompactList}\small\item\em gets offset value of memory location from shared memory\textquotesingle{}s base address \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{classvariable__info__t_a23161d9ae8119744d4696bfba00af3d8}{get\+Type\+Info}} ()
+\begin{DoxyCompactList}\small\item\em gets data type information of the variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+variable information type 
+
+\begin{DoxyAuthor}{Author}
+karthik 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+Fri Jan 08 2021 
+\end{DoxySince}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvariable__info__t_afc95cea73e8afd1cd8e7fa8398f9d367}\label{classvariable__info__t_afc95cea73e8afd1cd8e7fa8398f9d367}} 
+\index{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}}
+\index{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}}
+\doxysubsubsection{\texorpdfstring{variable\_info\_t()}{variable\_info\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily variable\+\_\+info\+\_\+t\+::variable\+\_\+info\+\_\+t (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvariable__info__t}{variable\+\_\+info\+\_\+t}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+copy constructor is deleted 
+
+\mbox{\Hypertarget{classvariable__info__t_a2a4a3468dac4b4c2aeb9456a214fb29d}\label{classvariable__info__t_a2a4a3468dac4b4c2aeb9456a214fb29d}} 
+\index{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}}
+\index{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}}
+\doxysubsubsection{\texorpdfstring{variable\_info\_t()}{variable\_info\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily variable\+\_\+info\+\_\+t\+::variable\+\_\+info\+\_\+t (\begin{DoxyParamCaption}\item[{const int}]{index,  }\item[{const uint32\+\_\+t}]{mem\+\_\+offset,  }\item[{const \mbox{\hyperlink{shm__variable__info__t_8hpp_a4d1cea158340a74679cbbc5f3929ea08}{dtype\+\_\+t}}}]{type\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index value of the variable \\
+\hline
+{\em mem\+\_\+offset} & memory offset from base address of the shared memory \\
+\hline
+{\em type\+\_\+info} & data type information (enumerated to dtype\+\_\+t) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{shm__variable__info__t_8hpp_a4d1cea158340a74679cbbc5f3929ea08}{dtype\+\_\+t}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classvariable__info__t_a978fbe7b5c4035790d6de6a482b0b93e}\label{classvariable__info__t_a978fbe7b5c4035790d6de6a482b0b93e}} 
+\index{variable\_info\_t@{variable\_info\_t}!getindex@{getindex}}
+\index{getindex@{getindex}!variable\_info\_t@{variable\_info\_t}}
+\doxysubsubsection{\texorpdfstring{getindex()}{getindex()}}
+{\footnotesize\ttfamily const int variable\+\_\+info\+\_\+t\+::getindex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets index value of the variable 
+
+\begin{DoxyReturn}{Returns}
+index value in int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__info__t_ae33a6858acfc2becdd08f12d1eb53b1d}\label{classvariable__info__t_ae33a6858acfc2becdd08f12d1eb53b1d}} 
+\index{variable\_info\_t@{variable\_info\_t}!getoffset@{getoffset}}
+\index{getoffset@{getoffset}!variable\_info\_t@{variable\_info\_t}}
+\doxysubsubsection{\texorpdfstring{getoffset()}{getoffset()}}
+{\footnotesize\ttfamily const uint32\+\_\+t variable\+\_\+info\+\_\+t\+::getoffset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets offset value of memory location from shared memory\textquotesingle{}s base address 
+
+\begin{DoxyReturn}{Returns}
+mem\+\_\+offset value in uint32\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__info__t_a23161d9ae8119744d4696bfba00af3d8}\label{classvariable__info__t_a23161d9ae8119744d4696bfba00af3d8}} 
+\index{variable\_info\_t@{variable\_info\_t}!getTypeInfo@{getTypeInfo}}
+\index{getTypeInfo@{getTypeInfo}!variable\_info\_t@{variable\_info\_t}}
+\doxysubsubsection{\texorpdfstring{getTypeInfo()}{getTypeInfo()}}
+{\footnotesize\ttfamily const uint8\+\_\+t variable\+\_\+info\+\_\+t\+::get\+Type\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets data type information of the variable 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t type value which enumerated by dtype\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvariable__info__t_a15e688d0922fc7b9df4c13f56b327311}\label{classvariable__info__t_a15e688d0922fc7b9df4c13f56b327311}} 
+\index{variable\_info\_t@{variable\_info\_t}!operator=@{operator=}}
+\index{operator=@{operator=}!variable\_info\_t@{variable\_info\_t}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvariable__info__t}{variable\+\_\+info\+\_\+t}}\& variable\+\_\+info\+\_\+t\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classvariable__info__t}{variable\+\_\+info\+\_\+t}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+asignment operator is deleted 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{shm__variable__info__t_8hpp}{shm\+\_\+variable\+\_\+info\+\_\+t.\+hpp}}\end{DoxyCompactItemize}

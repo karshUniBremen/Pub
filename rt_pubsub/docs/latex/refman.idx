@@ -1,0 +1,135 @@
+\indexentry{rt\_pub@{rt\_pub}|hyperpage}{5}
+\indexentry{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}|hyperpage}{6}
+\indexentry{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}|hyperpage}{6}
+\indexentry{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}|hyperpage}{6}
+\indexentry{rt\_pub@{rt\_pub}!rt\_pub@{rt\_pub}|hyperpage}{6}
+\indexentry{rt\_pub@{rt\_pub}!````~rt\_pub@{$\sim$rt\_pub}|hyperpage}{6}
+\indexentry{````~rt\_pub@{$\sim$rt\_pub}!rt\_pub@{rt\_pub}|hyperpage}{6}
+\indexentry{rt\_pub@{rt\_pub}!add\_subscriber@{add\_subscriber}|hyperpage}{6}
+\indexentry{add\_subscriber@{add\_subscriber}!rt\_pub@{rt\_pub}|hyperpage}{6}
+\indexentry{rt\_pub@{rt\_pub}!notify@{notify}|hyperpage}{7}
+\indexentry{notify@{notify}!rt\_pub@{rt\_pub}|hyperpage}{7}
+\indexentry{rt\_pub@{rt\_pub}!operator=@{operator=}|hyperpage}{7}
+\indexentry{operator=@{operator=}!rt\_pub@{rt\_pub}|hyperpage}{7}
+\indexentry{rt\_pub@{rt\_pub}!remove\_subscriber@{remove\_subscriber}|hyperpage}{7}
+\indexentry{remove\_subscriber@{remove\_subscriber}!rt\_pub@{rt\_pub}|hyperpage}{7}
+\indexentry{rt\_sub@{rt\_sub}|hyperpage}{8}
+\indexentry{rt\_sub@{rt\_sub}!sig\_handler@{sig\_handler}|hyperpage}{8}
+\indexentry{sig\_handler@{sig\_handler}!rt\_sub@{rt\_sub}|hyperpage}{8}
+\indexentry{rt\_sub@{rt\_sub}!rt\_sub@{rt\_sub}|hyperpage}{9}
+\indexentry{rt\_sub@{rt\_sub}!rt\_sub@{rt\_sub}|hyperpage}{9}
+\indexentry{rt\_sub@{rt\_sub}!````~rt\_sub@{$\sim$rt\_sub}|hyperpage}{9}
+\indexentry{````~rt\_sub@{$\sim$rt\_sub}!rt\_sub@{rt\_sub}|hyperpage}{9}
+\indexentry{rt\_sub@{rt\_sub}!await@{await}|hyperpage}{9}
+\indexentry{await@{await}!rt\_sub@{rt\_sub}|hyperpage}{9}
+\indexentry{rt\_sub@{rt\_sub}!block@{block}|hyperpage}{9}
+\indexentry{block@{block}!rt\_sub@{rt\_sub}|hyperpage}{9}
+\indexentry{rt\_sub@{rt\_sub}!getInstance@{getInstance}|hyperpage}{10}
+\indexentry{getInstance@{getInstance}!rt\_sub@{rt\_sub}|hyperpage}{10}
+\indexentry{rt\_sub@{rt\_sub}!init@{init}|hyperpage}{10}
+\indexentry{init@{init}!rt\_sub@{rt\_sub}|hyperpage}{10}
+\indexentry{rt\_sub@{rt\_sub}!operator=@{operator=}|hyperpage}{10}
+\indexentry{operator=@{operator=}!rt\_sub@{rt\_sub}|hyperpage}{10}
+\indexentry{rt\_sub@{rt\_sub}!unblock@{unblock}|hyperpage}{10}
+\indexentry{unblock@{unblock}!rt\_sub@{rt\_sub}|hyperpage}{10}
+\indexentry{rt\_sub@{rt\_sub}!unblock\_n\_await@{unblock\_n\_await}|hyperpage}{11}
+\indexentry{unblock\_n\_await@{unblock\_n\_await}!rt\_sub@{rt\_sub}|hyperpage}{11}
+\indexentry{shm\_block@{shm\_block}|hyperpage}{11}
+\indexentry{shm\_block@{shm\_block}!shm\_block@{shm\_block}|hyperpage}{12}
+\indexentry{shm\_block@{shm\_block}!shm\_block@{shm\_block}|hyperpage}{12}
+\indexentry{shm\_block@{shm\_block}!shm\_block@{shm\_block}|hyperpage}{12}
+\indexentry{shm\_block@{shm\_block}!shm\_block@{shm\_block}|hyperpage}{12}
+\indexentry{shm\_block@{shm\_block}!````~shm\_block@{$\sim$shm\_block}|hyperpage}{12}
+\indexentry{````~shm\_block@{$\sim$shm\_block}!shm\_block@{shm\_block}|hyperpage}{12}
+\indexentry{shm\_block@{shm\_block}!operator=@{operator=}|hyperpage}{13}
+\indexentry{operator=@{operator=}!shm\_block@{shm\_block}|hyperpage}{13}
+\indexentry{shm\_block@{shm\_block}!read@{read}|hyperpage}{13}
+\indexentry{read@{read}!shm\_block@{shm\_block}|hyperpage}{13}
+\indexentry{shm\_block@{shm\_block}!read@{read}|hyperpage}{13}
+\indexentry{read@{read}!shm\_block@{shm\_block}|hyperpage}{13}
+\indexentry{shm\_block@{shm\_block}!write@{write}|hyperpage}{14}
+\indexentry{write@{write}!shm\_block@{shm\_block}|hyperpage}{14}
+\indexentry{shm\_block@{shm\_block}!write\_@{write\_}|hyperpage}{14}
+\indexentry{write\_@{write\_}!shm\_block@{shm\_block}|hyperpage}{14}
+\indexentry{Timer@{Timer}|hyperpage}{15}
+\indexentry{Timer@{Timer}!Timer@{Timer}|hyperpage}{15}
+\indexentry{Timer@{Timer}!Timer@{Timer}|hyperpage}{15}
+\indexentry{Timer@{Timer}!````~Timer@{$\sim$Timer}|hyperpage}{15}
+\indexentry{````~Timer@{$\sim$Timer}!Timer@{Timer}|hyperpage}{15}
+\indexentry{Timer@{Timer}!start@{start}|hyperpage}{15}
+\indexentry{start@{start}!Timer@{Timer}|hyperpage}{15}
+\indexentry{Timer@{Timer}!stop@{stop}|hyperpage}{15}
+\indexentry{stop@{stop}!Timer@{Timer}|hyperpage}{15}
+\indexentry{variable\_info\_t@{variable\_info\_t}|hyperpage}{16}
+\indexentry{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}|hyperpage}{16}
+\indexentry{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}|hyperpage}{16}
+\indexentry{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}|hyperpage}{16}
+\indexentry{variable\_info\_t@{variable\_info\_t}!variable\_info\_t@{variable\_info\_t}|hyperpage}{16}
+\indexentry{variable\_info\_t@{variable\_info\_t}!getindex@{getindex}|hyperpage}{17}
+\indexentry{getindex@{getindex}!variable\_info\_t@{variable\_info\_t}|hyperpage}{17}
+\indexentry{variable\_info\_t@{variable\_info\_t}!getoffset@{getoffset}|hyperpage}{17}
+\indexentry{getoffset@{getoffset}!variable\_info\_t@{variable\_info\_t}|hyperpage}{17}
+\indexentry{variable\_info\_t@{variable\_info\_t}!getTypeInfo@{getTypeInfo}|hyperpage}{17}
+\indexentry{getTypeInfo@{getTypeInfo}!variable\_info\_t@{variable\_info\_t}|hyperpage}{17}
+\indexentry{variable\_info\_t@{variable\_info\_t}!operator=@{operator=}|hyperpage}{17}
+\indexentry{operator=@{operator=}!variable\_info\_t@{variable\_info\_t}|hyperpage}{17}
+\indexentry{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}|hyperpage}{18}
+\indexentry{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!variable\_t@{variable\_t}|hyperpage}{19}
+\indexentry{variable\_t@{variable\_t}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}|hyperpage}{19}
+\indexentry{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!add\_subscriber@{add\_subscriber}|hyperpage}{19}
+\indexentry{add\_subscriber@{add\_subscriber}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}|hyperpage}{19}
+\indexentry{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!read@{read}|hyperpage}{19}
+\indexentry{read@{read}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}|hyperpage}{19}
+\indexentry{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!remove\_subscriber@{remove\_subscriber}|hyperpage}{20}
+\indexentry{remove\_subscriber@{remove\_subscriber}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}|hyperpage}{20}
+\indexentry{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!update@{update}|hyperpage}{20}
+\indexentry{update@{update}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}|hyperpage}{20}
+\indexentry{variable\_t$<$ T $>$@{variable\_t$<$ T $>$}!write@{write}|hyperpage}{20}
+\indexentry{write@{write}!variable\_t$<$ T $>$@{variable\_t$<$ T $>$}|hyperpage}{20}
+\indexentry{src/benchmark.hpp@{src/benchmark.hpp}|hyperpage}{23}
+\indexentry{src/data\_dict.cpp@{src/data\_dict.cpp}|hyperpage}{23}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!rt\_sub\_handler@{rt\_sub\_handler}|hyperpage}{24}
+\indexentry{rt\_sub\_handler@{rt\_sub\_handler}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{24}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!indices@{indices}|hyperpage}{24}
+\indexentry{indices@{indices}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{24}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!info\_index\_0@{info\_index\_0}|hyperpage}{24}
+\indexentry{info\_index\_0@{info\_index\_0}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{24}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!info\_index\_1@{info\_index\_1}|hyperpage}{24}
+\indexentry{info\_index\_1@{info\_index\_1}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{24}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!info\_index\_2@{info\_index\_2}|hyperpage}{24}
+\indexentry{info\_index\_2@{info\_index\_2}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{24}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!proc\_space@{proc\_space}|hyperpage}{24}
+\indexentry{proc\_space@{proc\_space}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{24}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!var\_index\_0@{var\_index\_0}|hyperpage}{24}
+\indexentry{var\_index\_0@{var\_index\_0}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{24}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!var\_index\_1@{var\_index\_1}|hyperpage}{25}
+\indexentry{var\_index\_1@{var\_index\_1}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{25}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!var\_index\_2@{var\_index\_2}|hyperpage}{25}
+\indexentry{var\_index\_2@{var\_index\_2}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{25}
+\indexentry{data\_dict.cpp@{data\_dict.cpp}!var\_space@{var\_space}|hyperpage}{25}
+\indexentry{var\_space@{var\_space}!data\_dict.cpp@{data\_dict.cpp}|hyperpage}{25}
+\indexentry{src/data\_dict.hpp@{src/data\_dict.hpp}|hyperpage}{25}
+\indexentry{data\_dict.hpp@{data\_dict.hpp}!rt\_sub\_handler@{rt\_sub\_handler}|hyperpage}{25}
+\indexentry{rt\_sub\_handler@{rt\_sub\_handler}!data\_dict.hpp@{data\_dict.hpp}|hyperpage}{25}
+\indexentry{data\_dict.hpp@{data\_dict.hpp}!var\_index\_0@{var\_index\_0}|hyperpage}{26}
+\indexentry{var\_index\_0@{var\_index\_0}!data\_dict.hpp@{data\_dict.hpp}|hyperpage}{26}
+\indexentry{data\_dict.hpp@{data\_dict.hpp}!var\_index\_1@{var\_index\_1}|hyperpage}{26}
+\indexentry{var\_index\_1@{var\_index\_1}!data\_dict.hpp@{data\_dict.hpp}|hyperpage}{26}
+\indexentry{data\_dict.hpp@{data\_dict.hpp}!var\_index\_2@{var\_index\_2}|hyperpage}{26}
+\indexentry{var\_index\_2@{var\_index\_2}!data\_dict.hpp@{data\_dict.hpp}|hyperpage}{26}
+\indexentry{src/main.cpp@{src/main.cpp}|hyperpage}{26}
+\indexentry{main.cpp@{main.cpp}!main@{main}|hyperpage}{27}
+\indexentry{main@{main}!main.cpp@{main.cpp}|hyperpage}{27}
+\indexentry{src/rt\_pub.hpp@{src/rt\_pub.hpp}|hyperpage}{28}
+\indexentry{src/rt\_sub.hpp@{src/rt\_sub.hpp}|hyperpage}{28}
+\indexentry{src/shm\_block.hpp@{src/shm\_block.hpp}|hyperpage}{29}
+\indexentry{shm\_block.hpp@{shm\_block.hpp}!indices@{indices}|hyperpage}{29}
+\indexentry{indices@{indices}!shm\_block.hpp@{shm\_block.hpp}|hyperpage}{29}
+\indexentry{shm\_block.hpp@{shm\_block.hpp}!proc\_space@{proc\_space}|hyperpage}{29}
+\indexentry{proc\_space@{proc\_space}!shm\_block.hpp@{shm\_block.hpp}|hyperpage}{29}
+\indexentry{shm\_block.hpp@{shm\_block.hpp}!var\_space@{var\_space}|hyperpage}{29}
+\indexentry{var\_space@{var\_space}!shm\_block.hpp@{shm\_block.hpp}|hyperpage}{29}
+\indexentry{src/shm\_variable\_info\_t.hpp@{src/shm\_variable\_info\_t.hpp}|hyperpage}{30}
+\indexentry{shm\_variable\_info\_t.hpp@{shm\_variable\_info\_t.hpp}!dtype\_t@{dtype\_t}|hyperpage}{30}
+\indexentry{dtype\_t@{dtype\_t}!shm\_variable\_info\_t.hpp@{shm\_variable\_info\_t.hpp}|hyperpage}{30}
+\indexentry{src/shm\_variables.hpp@{src/shm\_variables.hpp}|hyperpage}{30}

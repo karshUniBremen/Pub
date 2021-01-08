@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_benchmark_8hpp">
+<title>src/benchmark.hpp File Reference</title>
+<indexterm><primary>src/benchmark.hpp</primary></indexterm>
+<programlisting>#include &lt;chrono&gt;
+#include &lt;iostream&gt;
+</programlisting>Include dependency graph for benchmark.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="benchmark_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="benchmark_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classTimer">Timer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classTimer">Timer</link> <link linkend="_benchmark_8hpp_1aecd5cdac370875bd9adbf1c31a803a65">benchmark_us</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_benchmark_8hpp_1aecd5cdac370875bd9adbf1c31a803a65"/>    <section>
+    <title>benchmark_us</title>
+<indexterm><primary>benchmark_us</primary><secondary>benchmark.hpp</secondary></indexterm>
+<indexterm><primary>benchmark.hpp</primary><secondary>benchmark_us</secondary></indexterm>
+<para><computeroutput><link linkend="_classTimer">Timer</link> benchmark_us</computeroutput></para></section>
+</section>
+</section>

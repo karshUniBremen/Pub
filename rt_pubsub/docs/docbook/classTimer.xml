@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classTimer">
+<title>Timer Class Reference</title>
+<indexterm><primary>Timer</primary></indexterm>
+<para>
+<computeroutput>#include &lt;benchmark.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classTimer_1a5f16e8da27d2a5a5242dead46de05d97">Timer</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classTimer_1a14fa469c4c295c5fa6e66a4ad1092146">~Timer</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classTimer_1a3a8b5272198d029779dc9302a54305a8">start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classTimer_1a63f0eb44b27402196590a03781515dba">stop</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classTimer_1a5f16e8da27d2a5a5242dead46de05d97"/>    <section>
+    <title>Timer()</title>
+<indexterm><primary>Timer</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>Timer</secondary></indexterm>
+<para><computeroutput>Timer::Timer ( )<computeroutput>[inline]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classTimer_1a14fa469c4c295c5fa6e66a4ad1092146"/>    <section>
+    <title>~Timer()</title>
+<indexterm><primary>~Timer</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>~Timer</secondary></indexterm>
+<para><computeroutput>Timer::~Timer ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classTimer_1a3a8b5272198d029779dc9302a54305a8"/>    <section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void Timer::start ( )<computeroutput>[inline]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classTimer_1a63f0eb44b27402196590a03781515dba"/>    <section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void Timer::stop ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_benchmark_8hpp">benchmark.hpp</link></section>
+</section>

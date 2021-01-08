@@ -1,0 +1,69 @@
+\hypertarget{data__dict_8cpp}{}\doxysection{src/data\+\_\+dict.cpp File Reference}
+\label{data__dict_8cpp}\index{src/data\_dict.cpp@{src/data\_dict.cpp}}
+{\ttfamily \#include \char`\"{}data\+\_\+dict.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shm\+\_\+block.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for data\+\_\+dict.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{data__dict_8cpp_a8cc8cb9e09035acd150b4dd53f15e0a2}{rt\+\_\+sub\+\_\+handler}} (int signo, siginfo\+\_\+t $\ast$info, void $\ast$extra)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classshm__block}{shm\+\_\+block}} \mbox{\hyperlink{data__dict_8cpp_a19c70a47a1e3d748e202348f5d5d3588}{var\+\_\+space}} (\char`\"{}/dev/shm/var\char`\"{}, 65, 1024)
+\item 
+\mbox{\hyperlink{classshm__block}{shm\+\_\+block}} \mbox{\hyperlink{data__dict_8cpp_afa6cae289c545c8ed8a15dca6ecbe04a}{proc\+\_\+space}} (\char`\"{}/dev/shm/proc\char`\"{}, 64, 128)
+\item 
+\mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ float $>$ \mbox{\hyperlink{data__dict_8cpp_aa37b9c9b9a82e5a46d51f49f4ceef821}{var\+\_\+index\+\_\+0}} (0, S\+I\+G\+R\+T\+M\+IN+1, 0, dtype\+\_\+t\+::\+F\+L\+O\+A\+T32)
+\item 
+\mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ int8\+\_\+t $>$ \mbox{\hyperlink{data__dict_8cpp_a1c21e1336e39eef880f469cf9e5b8371}{var\+\_\+index\+\_\+1}} (1, S\+I\+G\+R\+T\+M\+IN+1, 4, dtype\+\_\+t\+::\+S\+I\+G\+N\+E\+D8)
+\item 
+\mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$ int8\+\_\+t $>$ \mbox{\hyperlink{data__dict_8cpp_a01b99e22f0f15f2b614edef757a150e8}{var\+\_\+index\+\_\+2}} (2, S\+I\+G\+R\+T\+M\+IN+1, 5, dtype\+\_\+t\+::\+S\+I\+G\+N\+E\+D8)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{data__dict_8cpp_a8cc8cb9e09035acd150b4dd53f15e0a2}\label{data__dict_8cpp_a8cc8cb9e09035acd150b4dd53f15e0a2}} 
+\index{data\_dict.cpp@{data\_dict.cpp}!rt\_sub\_handler@{rt\_sub\_handler}}
+\index{rt\_sub\_handler@{rt\_sub\_handler}!data\_dict.cpp@{data\_dict.cpp}}
+\doxysubsubsection{\texorpdfstring{rt\_sub\_handler()}{rt\_sub\_handler()}}
+{\footnotesize\ttfamily void rt\+\_\+sub\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{signo,  }\item[{siginfo\+\_\+t $\ast$}]{info,  }\item[{void $\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{data__dict_8cpp_afa6cae289c545c8ed8a15dca6ecbe04a}\label{data__dict_8cpp_afa6cae289c545c8ed8a15dca6ecbe04a}} 
+\index{data\_dict.cpp@{data\_dict.cpp}!proc\_space@{proc\_space}}
+\index{proc\_space@{proc\_space}!data\_dict.cpp@{data\_dict.cpp}}
+\doxysubsubsection{\texorpdfstring{proc\_space}{proc\_space}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshm__block}{shm\+\_\+block}} proc\+\_\+space(\char`\"{}/dev/shm/proc\char`\"{}, 64, 128)}
+
+variable space in shared memory \mbox{\Hypertarget{data__dict_8cpp_aa37b9c9b9a82e5a46d51f49f4ceef821}\label{data__dict_8cpp_aa37b9c9b9a82e5a46d51f49f4ceef821}} 
+\index{data\_dict.cpp@{data\_dict.cpp}!var\_index\_0@{var\_index\_0}}
+\index{var\_index\_0@{var\_index\_0}!data\_dict.cpp@{data\_dict.cpp}}
+\doxysubsubsection{\texorpdfstring{var\_index\_0}{var\_index\_0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$float$>$ var\+\_\+index\+\_\+0(0, S\+I\+G\+R\+T\+M\+IN+1, 0, dtype\+\_\+t\+::\+F\+L\+O\+A\+T32)}
+
+\mbox{\Hypertarget{data__dict_8cpp_a1c21e1336e39eef880f469cf9e5b8371}\label{data__dict_8cpp_a1c21e1336e39eef880f469cf9e5b8371}} 
+\index{data\_dict.cpp@{data\_dict.cpp}!var\_index\_1@{var\_index\_1}}
+\index{var\_index\_1@{var\_index\_1}!data\_dict.cpp@{data\_dict.cpp}}
+\doxysubsubsection{\texorpdfstring{var\_index\_1}{var\_index\_1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$int8\+\_\+t$>$ var\+\_\+index\+\_\+1(1, S\+I\+G\+R\+T\+M\+IN+1, 4, dtype\+\_\+t\+::\+S\+I\+G\+N\+E\+D8)}
+
+\mbox{\Hypertarget{data__dict_8cpp_a01b99e22f0f15f2b614edef757a150e8}\label{data__dict_8cpp_a01b99e22f0f15f2b614edef757a150e8}} 
+\index{data\_dict.cpp@{data\_dict.cpp}!var\_index\_2@{var\_index\_2}}
+\index{var\_index\_2@{var\_index\_2}!data\_dict.cpp@{data\_dict.cpp}}
+\doxysubsubsection{\texorpdfstring{var\_index\_2}{var\_index\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvariable__t}{variable\+\_\+t}}$<$int8\+\_\+t$>$ var\+\_\+index\+\_\+2(2, S\+I\+G\+R\+T\+M\+IN+1, 5, dtype\+\_\+t\+::\+S\+I\+G\+N\+E\+D8)}
+
+\mbox{\Hypertarget{data__dict_8cpp_a19c70a47a1e3d748e202348f5d5d3588}\label{data__dict_8cpp_a19c70a47a1e3d748e202348f5d5d3588}} 
+\index{data\_dict.cpp@{data\_dict.cpp}!var\_space@{var\_space}}
+\index{var\_space@{var\_space}!data\_dict.cpp@{data\_dict.cpp}}
+\doxysubsubsection{\texorpdfstring{var\_space}{var\_space}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classshm__block}{shm\+\_\+block}} var\+\_\+space(\char`\"{}/dev/shm/var\char`\"{}, 65, 1024)}
+

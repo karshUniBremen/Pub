@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shm__block_8hpp">
+<title>src/shm_block.hpp File Reference</title>
+<indexterm><primary>src/shm_block.hpp</primary></indexterm>
+<programlisting>#include &lt;iostream&gt;
+#include &lt;atomic&gt;
+#include &lt;stddef.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;sys/ipc.h&gt;
+#include &lt;sys/shm.h&gt;
+#include &lt;cstdint&gt;
+#include &lt;cstring&gt;
+#include &lt;exception&gt;
+#include &lt;shared_mutex&gt;
+#include &lt;stdexcept&gt;
+#include &quot;shm_variable_info_t.hpp&quot;
+</programlisting>Include dependency graph for shm_block.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="shm__block_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="shm__block_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classshm__block">shm_block</link></para>
+
+<para>shared memory block class </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvariable__info__t">variable_info_t</link> * <link linkend="_shm__block_8hpp_1a5dbd8fd978aa8eb02585b12b059b3322">indices</link> []</para>
+</listitem>
+            <listitem><para><link linkend="_classshm__block">shm_block</link> <link linkend="_shm__block_8hpp_1aeba28495d9e9019253f3592db252a8c8">var_space</link></para>
+</listitem>
+            <listitem><para><link linkend="_classshm__block">shm_block</link> <link linkend="_shm__block_8hpp_1a4e39316b9809a3eb57ddcd0999629471">proc_space</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_shm__block_8hpp_1a5dbd8fd978aa8eb02585b12b059b3322"/>    <section>
+    <title>indices</title>
+<indexterm><primary>indices</primary><secondary>shm_block.hpp</secondary></indexterm>
+<indexterm><primary>shm_block.hpp</primary><secondary>indices</secondary></indexterm>
+<para><computeroutput><link linkend="_classvariable__info__t">variable_info_t</link>* indices[]</computeroutput></para>    </section><anchor xml:id="_shm__block_8hpp_1a4e39316b9809a3eb57ddcd0999629471"/>    <section>
+    <title>proc_space</title>
+<indexterm><primary>proc_space</primary><secondary>shm_block.hpp</secondary></indexterm>
+<indexterm><primary>shm_block.hpp</primary><secondary>proc_space</secondary></indexterm>
+<para><computeroutput><link linkend="_classshm__block">shm_block</link> proc_space</computeroutput></para>
+<para>variable space in shared memory </para>
+    </section><anchor xml:id="_shm__block_8hpp_1aeba28495d9e9019253f3592db252a8c8"/>    <section>
+    <title>var_space</title>
+<indexterm><primary>var_space</primary><secondary>shm_block.hpp</secondary></indexterm>
+<indexterm><primary>shm_block.hpp</primary><secondary>var_space</secondary></indexterm>
+<para><computeroutput><link linkend="_classshm__block">shm_block</link> var_space</computeroutput></para></section>
+</section>
+</section>

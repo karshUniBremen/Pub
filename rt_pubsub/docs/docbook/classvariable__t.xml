@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classvariable__t">
+<title>variable_t&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>variable_t&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>Data dictionary variable type. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;shm_variables.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classvariable__t_1a68d65543e7d2c597da254117a28af1df">variable_t</link> (int const &amp;index, int const signal_type)</para>
+
+<para>constructor </para>
+</listitem>
+            <listitem><para>void <link linkend="_classvariable__t_1aa5f590839920377a21e393c1e8f7f169">write</link> (const T &amp;value)</para>
+
+<para>Writes data into shared memory and notifies all subscriber. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classvariable__t_1a43516fec7499db2a7e6f86a421a76106">read</link> (T &amp;value)</para>
+
+<para>reads data from shared memory </para>
+</listitem>
+            <listitem><para>void <link linkend="_classvariable__t_1af35fbc1e02c39e0e840e49cf02b639f1">update</link> ()</para>
+
+<para>updates value store of the variable from shared memory (called inside signal handler only) </para>
+</listitem>
+            <listitem><para>void <link linkend="_classvariable__t_1aa6597d6c023ebb85c12ff4cd36755347">add_subscriber</link> (const pid_t pid)</para>
+
+<para>adds subscriber to the variable subscriber list </para>
+</listitem>
+            <listitem><para>void <link linkend="_classvariable__t_1a9adfc72f63b0914a6df1c2979f8ceff5">remove_subscriber</link> (const pid_t pid)</para>
+
+<para>removes subscriber from the subscriber list of the variable </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class T&gt;
+class variable_t&lt; T &gt;</title></simplesect>
+
+
+<para>Data dictionary variable type. </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>Karthik </para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>Fri Jan 08 2021 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classvariable__t_1a68d65543e7d2c597da254117a28af1df"/>    <section>
+    <title>variable_t()</title>
+<indexterm><primary>variable_t</primary><secondary>variable_t&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>variable_t&lt; T &gt;</primary><secondary>variable_t</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_classvariable__t">variable_t</link>&lt; T &gt;::<link linkend="_classvariable__t">variable_t</link> (int const &amp; index, int const signal_type)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>constructor </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>index value of the variable </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>signal_type</entry>
+                                <entry>
+<para>Linux signal value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classvariable__t_1aa6597d6c023ebb85c12ff4cd36755347"/>    <section>
+    <title>add_subscriber()</title>
+<indexterm><primary>add_subscriber</primary><secondary>variable_t&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>variable_t&lt; T &gt;</primary><secondary>add_subscriber</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classvariable__t">variable_t</link>&lt; T &gt;::add_subscriber (const pid_t pid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>adds subscriber to the variable subscriber list </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pid</entry>
+                                <entry>
+<para>process ID of the subscriber </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classvariable__t_1a43516fec7499db2a7e6f86a421a76106"/>    <section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>variable_t&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>variable_t&lt; T &gt;</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classvariable__t">variable_t</link>&lt; T &gt;::read (T &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>reads data from shared memory </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>value read from value store (not from shared memory) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classvariable__t_1a9adfc72f63b0914a6df1c2979f8ceff5"/>    <section>
+    <title>remove_subscriber()</title>
+<indexterm><primary>remove_subscriber</primary><secondary>variable_t&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>variable_t&lt; T &gt;</primary><secondary>remove_subscriber</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classvariable__t">variable_t</link>&lt; T &gt;::remove_subscriber (const pid_t pid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>removes subscriber from the subscriber list of the variable </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pid</entry>
+                                <entry>
+<para>process ID of the subscriber </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classvariable__t_1af35fbc1e02c39e0e840e49cf02b639f1"/>    <section>
+    <title>update()</title>
+<indexterm><primary>update</primary><secondary>variable_t&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>variable_t&lt; T &gt;</primary><secondary>update</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classvariable__t">variable_t</link>&lt; T &gt;::update ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>updates value store of the variable from shared memory (called inside signal handler only) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classvariable__t_1aa5f590839920377a21e393c1e8f7f169"/>    <section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>variable_t&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>variable_t&lt; T &gt;</primary><secondary>write</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classvariable__t">variable_t</link>&lt; T &gt;::write (const T &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Writes data into shared memory and notifies all subscriber. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>value to be written </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_shm__variables_8hpp">shm_variables.hpp</link></section>
+</section>

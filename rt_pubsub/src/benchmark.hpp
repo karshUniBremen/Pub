@@ -3,31 +3,32 @@
 #include <chrono>
 #include <iostream>
 
-class Timer{
+class Timer {
+	std::chrono::time_point<std::chrono::high_resolution_clock> m_StartTimepoint;
 public:
-Timer():m_StartTimepoint{}{
-}
+	Timer() :
+			m_StartTimepoint { } {
+	}
 
-~Timer(){
-}
+	~Timer() {
+	}
 
-void start(){
-	m_StartTimepoint = std::chrono::high_resolution_clock::now();
-}
+	void start() {
+		m_StartTimepoint = std::chrono::high_resolution_clock::now();
+	}
 
-void stop(){
-	auto endTimepoint = std::chrono::high_resolution_clock::now();
-	auto  start= std::chrono::time_point_cast<std::chrono::microseconds>(m_StartTimepoint).time_since_epoch().count();
-	auto end = std::chrono::time_point_cast<std::chrono::microseconds>(endTimepoint).time_since_epoch().count();
-	auto duration = end - start;
+	void stop() const {
+		auto endTimepoint = std::chrono::high_resolution_clock::now();
+		auto const start = std::chrono::time_point_cast<std::chrono::microseconds>(m_StartTimepoint).time_since_epoch().count();
+		auto const end = std::chrono::time_point_cast<std::chrono::microseconds>(endTimepoint).time_since_epoch().count();
+		auto const duration = end - start;
 //	double ms = duration * 0.001;
-	std::clog<<duration<<"\n";
-}
+		std::clog << duration << "\n";
+	}
 
-private:
-std::chrono::time_point<std::chrono::high_resolution_clock> m_StartTimepoint;
-}benchmark_us;
 
-extern Timer benchmark_us;
+};
+
+Timer benchmark_us;
 
 #endif /* BENCHMARK_HPP_ */

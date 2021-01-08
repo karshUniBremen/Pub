@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrt__pub">
+<title>rt_pub Class Reference</title>
+<indexterm><primary>rt_pub</primary></indexterm>
+<para>
+
+<para>real-time publisher </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;rt_pub.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrt__pub_1a4ec67f68573b7bd89fe39efac8ea29dc">rt_pub</link> (const <link linkend="_classrt__pub">rt_pub</link> &amp;)=delete</para>
+
+<para>copy constructor deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classrt__pub">rt_pub</link> &amp; <link linkend="_classrt__pub_1a39d462ef24ebc02d38d7aa3ae670214d">operator=</link> (const <link linkend="_classrt__pub">rt_pub</link> &amp;)=delete</para>
+
+<para>assignment operator deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classrt__pub_1aabd1b3b178f0aefa9ef0c1e04f9284ce">rt_pub</link> (int const signal_type, int const var_id)</para>
+
+<para>constructor of real-time publisher </para>
+</listitem>
+            <listitem><para><link linkend="_classrt__pub_1abada18c0ad7a80d4024983d791f9d984">~rt_pub</link> ()</para>
+
+<para>destructor </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrt__pub_1a110e5315dfcedc4e1242317f323fea9a">add_subscriber</link> (const pid_t pid)</para>
+
+<para>add subscriber to the subscriber list of the publisher </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrt__pub_1a620196f83115bf8909a070e3b96ad668">remove_subscriber</link> (const pid_t pid)</para>
+
+<para>remove subscriber from subscriber list of the publisher </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrt__pub_1a7bf0d32a9948311148139c88a772ce50">notify</link> ()</para>
+
+<para>notify all subscriber </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>real-time publisher </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>karthik </para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>Mon Jan 04 2021 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrt__pub_1a4ec67f68573b7bd89fe39efac8ea29dc"/>    <section>
+    <title>rt_pub()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>rt_pub</primary><secondary>rt_pub</secondary></indexterm>
+<indexterm><primary>rt_pub</primary><secondary>rt_pub</secondary></indexterm>
+<para><computeroutput>rt_pub::rt_pub (const <link linkend="_classrt__pub">rt_pub</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>copy constructor deleted </para>
+</para>
+    </section><anchor xml:id="_classrt__pub_1aabd1b3b178f0aefa9ef0c1e04f9284ce"/>    <section>
+    <title>rt_pub()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>rt_pub</primary><secondary>rt_pub</secondary></indexterm>
+<indexterm><primary>rt_pub</primary><secondary>rt_pub</secondary></indexterm>
+<para><computeroutput>rt_pub::rt_pub (int const signal_type, int const var_id)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor of real-time publisher </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>signal_type</entry>
+                                <entry>
+<para>Linux signal number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>index variable to which publisher belongs </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_classrt__pub_1abada18c0ad7a80d4024983d791f9d984"/>    <section>
+    <title>~rt_pub()</title>
+<indexterm><primary>~rt_pub</primary><secondary>rt_pub</secondary></indexterm>
+<indexterm><primary>rt_pub</primary><secondary>~rt_pub</secondary></indexterm>
+<para><computeroutput>rt_pub::~rt_pub ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>destructor </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrt__pub_1a110e5315dfcedc4e1242317f323fea9a"/>    <section>
+    <title>add_subscriber()</title>
+<indexterm><primary>add_subscriber</primary><secondary>rt_pub</secondary></indexterm>
+<indexterm><primary>rt_pub</primary><secondary>add_subscriber</secondary></indexterm>
+<para><computeroutput>void rt_pub::add_subscriber (const pid_t pid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>add subscriber to the subscriber list of the publisher </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pid</entry>
+                                <entry>
+<para>process id of the subscriber </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classrt__pub_1a7bf0d32a9948311148139c88a772ce50"/>    <section>
+    <title>notify()</title>
+<indexterm><primary>notify</primary><secondary>rt_pub</secondary></indexterm>
+<indexterm><primary>rt_pub</primary><secondary>notify</secondary></indexterm>
+<para><computeroutput>void rt_pub::notify ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>notify all subscriber </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classrt__pub_1a39d462ef24ebc02d38d7aa3ae670214d"/>    <section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>rt_pub</secondary></indexterm>
+<indexterm><primary>rt_pub</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_classrt__pub">rt_pub</link>&amp; rt_pub::operator= (const <link linkend="_classrt__pub">rt_pub</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>assignment operator deleted </para>
+</para>
+    </section><anchor xml:id="_classrt__pub_1a620196f83115bf8909a070e3b96ad668"/>    <section>
+    <title>remove_subscriber()</title>
+<indexterm><primary>remove_subscriber</primary><secondary>rt_pub</secondary></indexterm>
+<indexterm><primary>rt_pub</primary><secondary>remove_subscriber</secondary></indexterm>
+<para><computeroutput>void rt_pub::remove_subscriber (const pid_t pid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>remove subscriber from subscriber list of the publisher </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pid</entry>
+                                <entry>
+<para>process id </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>(void) </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_rt__pub_8hpp">rt_pub.hpp</link></section>
+</section>

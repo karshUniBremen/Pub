@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shm__variable__info__t_8hpp">
+<title>src/shm_variable_info_t.hpp File Reference</title>
+<indexterm><primary>src/shm_variable_info_t.hpp</primary></indexterm>
+<programlisting>#include &lt;stddef.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;array&gt;
+#include &lt;atomic&gt;
+</programlisting>Include dependency graph for shm_variable_info_t.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="shm__variable__info__t_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="shm__variable__info__t_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classvariable__info__t">variable_info_t</link></para>
+
+<para>variable information type </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_shm__variable__info__t_8hpp_1a4d1cea158340a74679cbbc5f3929ea08">dtype_t</link> = enum { UNSIGNED8=0, UNSIGNED16, UNSIGNED32, UNSIGNED64, SIGNED8, SIGNED16, SIGNED32, SIGNED64, FLOAT32, FLOAT64 }</para>
+
+<para>enumeration of data type </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_shm__variable__info__t_8hpp_1a4d1cea158340a74679cbbc5f3929ea08"/>    <section>
+    <title>dtype_t</title>
+<indexterm><primary>dtype_t</primary><secondary>shm_variable_info_t.hpp</secondary></indexterm>
+<indexterm><primary>shm_variable_info_t.hpp</primary><secondary>dtype_t</secondary></indexterm>
+<para><computeroutput>using <link linkend="_shm__variable__info__t_8hpp_1a4d1cea158340a74679cbbc5f3929ea08">dtype_t</link> =  enum { UNSIGNED8 = 0, UNSIGNED16, UNSIGNED32, UNSIGNED64, SIGNED8, SIGNED16, SIGNED32, SIGNED64, FLOAT32, FLOAT64 }</computeroutput></para><para>
+
+<para>enumeration of data type </para>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classshm__block">
+<title>shm_block Class Reference</title>
+<indexterm><primary>shm_block</primary></indexterm>
+<para>
+
+<para>shared memory block class </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;shm_block.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classshm__block_1a3dac40f5ff8de6d4fd3d05d856a337d1">shm_block</link> (const <link linkend="_classshm__block">shm_block</link> &amp;)=delete</para>
+
+<para>copy constructor is deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classshm__block">shm_block</link> &amp; <link linkend="_classshm__block_1af2243f96740db0ef62058cafb2cb1407">operator=</link> (const <link linkend="_classshm__block">shm_block</link> &amp;)=delete</para>
+
+<para>assignment operator is deleted </para>
+</listitem>
+            <listitem><para><link linkend="_classshm__block_1a8944ec9bf48979e1d2f90b17462f16a1">shm_block</link> (const char *const name, unsigned int const block_id, unsigned int const block_size)</para>
+
+<para>constructor </para>
+</listitem>
+            <listitem><para><link linkend="_classshm__block_1ad6c833b366e66c9618e1c83be12e1347">~shm_block</link> () noexcept</para>
+
+<para>destructor </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classshm__block_1a30f6e1c8abf1496671295e982ec2b1b8">read</link> (const int &amp;index, T &amp;val) const</para>
+
+<para>reads value from shared memory location of specified index variable </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classshm__block_1ab6caa6a46dc7086c3c74f8a0224964b5">read</link> (const int &amp;index, volatile std::atomic&lt; T &gt; &amp;val) const</para>
+
+<para>reads value from shared memory location of specified index variable </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classshm__block_1ad81f9fdd84cd6756aafdedddf36d2f3b">write</link> (const int index, const T &amp;value) const</para>
+
+<para>write data to shared memory of variable with specified index </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classshm__block_1af11fc27c58b4586ae16033bfe35ec86d">write_</link> (const int index, std::atomic&lt; T &gt; &amp;value) const</para>
+
+<para>write data to shared memory of variable with specified index </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>shared memory block class </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>karthik </para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>Mon Jan 04 2021 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classshm__block_1a3dac40f5ff8de6d4fd3d05d856a337d1"/>    <section>
+    <title>shm_block()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>shm_block</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>shm_block</secondary></indexterm>
+<para><computeroutput>shm_block::shm_block (const <link linkend="_classshm__block">shm_block</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>copy constructor is deleted </para>
+</para>
+    </section><anchor xml:id="_classshm__block_1a8944ec9bf48979e1d2f90b17462f16a1"/>    <section>
+    <title>shm_block()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>shm_block</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>shm_block</secondary></indexterm>
+<para><computeroutput>shm_block::shm_block (const char *const name, unsigned int const block_id, unsigned int const block_size)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>constructor </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>user defined name to the shared memory </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>block_id</entry>
+                                <entry>
+<para>user defined ID to the shared memory </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>block_size</entry>
+                                <entry>
+<para>size of the shared memory </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_classshm__block_1ad6c833b366e66c9618e1c83be12e1347"/>    <section>
+    <title>~shm_block()</title>
+<indexterm><primary>~shm_block</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>~shm_block</secondary></indexterm>
+<para><computeroutput>shm_block::~shm_block ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>destructor </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classshm__block_1af2243f96740db0ef62058cafb2cb1407"/>    <section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_classshm__block">shm_block</link>&amp; shm_block::operator= (const <link linkend="_classshm__block">shm_block</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para><para>
+
+<para>assignment operator is deleted </para>
+</para>
+    </section><anchor xml:id="_classshm__block_1a30f6e1c8abf1496671295e982ec2b1b8"/>    <section>
+    <title>read()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void shm_block::read (const int &amp; index, T &amp; val) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>reads value from shared memory location of specified index variable </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>index of the variable </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>val</entry>
+                                <entry>
+<para>variable in which read value is stored </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classshm__block_1ab6caa6a46dc7086c3c74f8a0224964b5"/>    <section>
+    <title>read()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void shm_block::read (const int &amp; index, volatile std::atomic&lt; T &gt; &amp; val) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>reads value from shared memory location of specified index variable </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>index of the variable </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>val</entry>
+                                <entry>
+<para>atomic variable in which read value is stored </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classshm__block_1ad81f9fdd84cd6756aafdedddf36d2f3b"/>    <section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>write</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void shm_block::write (const int index, const T &amp; value) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>write data to shared memory of variable with specified index </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>index of the variable </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>value to be written </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_classshm__block_1af11fc27c58b4586ae16033bfe35ec86d"/>    <section>
+    <title>write_()</title>
+<indexterm><primary>write_</primary><secondary>shm_block</secondary></indexterm>
+<indexterm><primary>shm_block</primary><secondary>write_</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void shm_block::write_ (const int index, std::atomic&lt; T &gt; &amp; value) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>write data to shared memory of variable with specified index </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>index index of the variable </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>atomic variable containing value to be written </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/<link linkend="_shm__block_8hpp">shm_block.hpp</link></section>
+</section>

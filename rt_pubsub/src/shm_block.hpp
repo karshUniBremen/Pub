@@ -14,9 +14,9 @@
 #include <shared_mutex>
 #include <stdexcept>
 
-#include "shm_variable_info_t.hpp"
+//#include "shm_variable_info_t.hpp"
 
-extern variable_info_t *indices[];
+//extern variable_info_t *indices[];
 
 /**
  * @brief shared memory block class
@@ -99,10 +99,10 @@ public:
 	 * @return void
 	 */
 	template <typename T>
-	void read(const int &index, T &val) const
+	void read(const uint32_t &offset, T &val) const
 	{
 		volatile std::atomic<T> atm_var(0);
-		T *ptr = (T *)(this->addr + indices[index]->getoffset());
+		T *ptr = (T *)(this->addr + offset);
 		atm_var.store(*ptr, std::memory_order_relaxed);
 		val = atm_var.load(std::memory_order_relaxed);
 	}
@@ -114,9 +114,9 @@ public:
 	 * @return
 	 */
 	template <typename T>
-	void read(const int &index, volatile std::atomic<T> &val) const
+	void read(const uint32_t &offset, volatile std::atomic<T> &val) const
 	{
-		T *ptr = (T *)(this->addr + indices[index]->getoffset());
+		T *ptr = (T *)(this->addr + offset);
 		val.store(*ptr, std::memory_order_relaxed);
 	}
 
@@ -127,10 +127,10 @@ public:
 	 * @return void
 	 */
 	template <typename T>
-	void write(const int index, const T &value) const
+	void write(const uint32_t &offset, const T &value) const
 	{
 		volatile std::atomic<T> atm_var(value);
-		T *ptr = (T *)(this->addr + indices[index]->getoffset());
+		T *ptr = (T *)(this->addr + offset);
 		*ptr = atm_var.load(std::memory_order_relaxed);
 	}
 
@@ -141,9 +141,9 @@ public:
 	 * @return
 	 */
 	template <typename T>
-	void write_(const int index, std::atomic<T> &value) const
+	void write_(const uint32_t &offset, std::atomic<T> &value) const
 	{
-		T *ptr = (T *)(this->addr + indices[index]->getoffset());
+		T *ptr = (T *)(this->addr + offset);
 		*ptr = value.load(std::memory_order_relaxed);
 	}
 };
