@@ -18,9 +18,8 @@
 #include <exception>
 #include <stdexcept>
 
-
 /**
- * @brief 
+ * @brief real-time subscriber
  * @author 
  * @since Mon Jan 04 2021
  */
@@ -28,103 +27,108 @@ class rt_sub
 {
 public:
 	/**
-  * @brief 
-  * @param signo
-  * @param info
-  * @param extra
-  * @return 
+  * @brief signal handler function type
+  * @param signo signal number
+  * @param info signal information
+  * @param extra extra
+  * @return void
   */
-	using  sig_handler = void (*)(int signo, siginfo_t *info, void *extra);
-
+	using sig_handler = void (*)(int signo, siginfo_t *info, void *extra);
 
 	/**
-  * @brief 
-  * @param 
-  */
+	 * @brief copy constructor deleted
+	 */
 	rt_sub(const rt_sub &) = delete;
+
 	/**
-  * @brief 
-  * @param 
-  * @return 
-  */
+	 * @brief assignment operator deleted
+	 */
 	rt_sub &operator=(const rt_sub &) = delete;
 
 	/**
-  * @brief 
+  * @brief destrucor
   */
-	~rt_sub() {
+	~rt_sub()
+	{
 		sigprocmask(SIG_BLOCK, &newmask, &oldmask);
 		signal(this->sig_type, SIG_DFL);
 		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
 	}
 
 	/**
-  * @brief 
-  * @param signal_type
-  * @param signal_handler
+  * @brief initialization
+  * @param signal_type signal value to be registered
+  * @param signal_handler signal handler to be attached
   * @return 
   */
-	static rt_sub* init(int const signal_type, const sig_handler signal_handler) {
-		if (rt_sub::instance == nullptr) {
+	static rt_sub *init(int const signal_type, const sig_handler signal_handler)
+	{
+		if (rt_sub::instance == nullptr)
+		{
 			rt_sub::instance = new rt_sub{signal_type, signal_handler};
 		}
 		return rt_sub::instance;
 	}
 
 	/**
-  * @brief 
-  * @return 
+  * @brief gets instance of the subscriber
+  * @return pointers to the subscriber instance
   */
-	static rt_sub* getInstance() {
+	static rt_sub *getInstance()
+	{
 		return rt_sub::instance;
 	}
 	/**
-  * @brief 
+  * @brief blocks the signals
   * @return (void)
   */
-	void block() {
+	void block()
+	{
 		sigprocmask(SIG_BLOCK, &newmask, &oldmask);
 	}
 
 	/**
-  * @brief 
+  * @brief unblocks the signal
   * @return (void)
   */
-	void unblock() {
+	void unblock()
+	{
 		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
 	}
 
 	/**
-  * @brief 
+  * @brief unblocks and awaits for the signal
   * @return (void)
   */
-	void unblock_n_await() {
+	void unblock_n_await()
+	{
 		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
-		sigsuspend (&oldmask);
+		sigsuspend(&oldmask);
 	}
 
 	/**
-  * @brief 
+  * @brief awaits for the signal
   * @return (void)
   */
-	void await() {
-		sigsuspend (&oldmask);
+	void await()
+	{
+		sigsuspend(&oldmask);
 	}
 
 private:
-	const int sig_type;
-	const sig_handler handler;
-	sigset_t newmask;
-	sigset_t oldmask;
-	struct sigaction action;
-	inline static rt_sub *instance = nullptr;
+	const int sig_type;						  /** signal number */
+	const sig_handler handler;				  /** signal handler*/
+	sigset_t newmask;						  /** new mask for signal*/
+	sigset_t oldmask;						  /** old mask for signal*/
+	struct sigaction action;				  /** signal action */
+	inline static rt_sub *instance = nullptr; /** subscriber instance*/
 	/**
- * @brief
- * @param signal_type
- * @param signal_handler
+ * @brief constructor
+ * @param signal_type signal number of the subscriber signal
+ * @param signal_handler signal handler
  */
 	explicit rt_sub(int const signal_type, const sig_handler signal_handler)
-	: sig_type{signal_type}, handler{signal_handler},newmask {},oldmask {},action {}
+		: sig_type{signal_type}, handler{signal_handler}, newmask{}, oldmask{}, action{}
 	{
 		try
 		{
