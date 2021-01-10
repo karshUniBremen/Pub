@@ -22,7 +22,7 @@ int user_app_file_descriptor = -1;
 ringbuf<int,RING_BUFFER_SIZE> user_notification_queue;
 #endif
 
-shm_block process_var_space("/dev/shm/var", 65, 1024);
+shm_block process_var_space("/dev/shm/var", 68, 1024);
 shm_block service_var_space("/dev/shm/proc", 64, 128);
 
 variable_t<float> var_index_0(0, SIGRTMIN + 1, 0, dtype_t::FLOAT32);
@@ -75,8 +75,6 @@ void rt_sub_handler(int signo, siginfo_t *info, void *extra) {
 #ifdef ENABLE_DIRECT_USER_NOTIFY_CB_CALL
 		rt_sub::user_app_notify(2);
 #endif
-
-
 
 		break;
 

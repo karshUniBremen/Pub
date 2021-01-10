@@ -61,8 +61,8 @@ public:
 				throw std::runtime_error("throw shared memory get failed");
 			}
 
-			int *const ret = (int *)shmat(this->mem_id, (void *)0, 0);
-			if (*ret == -1)
+			int* ret = (int*) shmat(this->mem_id, (void*) 0, 0);
+			if (ret == (int*)-1)
 			{
 				throw std::runtime_error("shared memory attach failed");
 			}
@@ -103,8 +103,8 @@ public:
 	{
 		volatile std::atomic<T> atm_var(0);
 		T *ptr = (T *)(this->addr + offset);
-		atm_var.store(*ptr, std::memory_order_relaxed);
-		val = atm_var.load(std::memory_order_relaxed);
+		atm_var.store(*ptr, std::memory_order_seq_cst);
+		val = atm_var.load(std::memory_order_seq_cst);
 	}
 
 	/**
@@ -117,7 +117,7 @@ public:
 	void read(const uint32_t &offset, volatile std::atomic<T> &val) const
 	{
 		T *ptr = (T *)(this->addr + offset);
-		val.store(*ptr, std::memory_order_relaxed);
+		val.store(*ptr, std::memory_order_seq_cst);
 	}
 
 	/**
@@ -131,7 +131,7 @@ public:
 	{
 		volatile std::atomic<T> atm_var(value);
 		T *ptr = (T *)(this->addr + offset);
-		*ptr = atm_var.load(std::memory_order_relaxed);
+		*ptr = atm_var.load(std::memory_order_seq_cst);
 	}
 
 	/**
@@ -144,7 +144,7 @@ public:
 	void write_(const uint32_t &offset, std::atomic<T> &value) const
 	{
 		T *ptr = (T *)(this->addr + offset);
-		*ptr = value.load(std::memory_order_relaxed);
+		*ptr = value.load(std::memory_order_seq_cst);
 	}
 };
 

@@ -24,15 +24,15 @@ public:
 	}
 
 	void write(const T& data) noexcept{
-		volatile size_t index_val =  write_index.load(std::memory_order_relaxed);
+		volatile size_t index_val =  write_index.load(std::memory_order_acquire);
 		if(index_val == RING_SIZE){
-			ring[0].store(data, std::memory_order_relaxed);
-			write_index.store(1,std::memory_order_relaxed);
-			curSize.fetch_add(1, std::memory_order_relaxed);
+			ring[0].store(data, std::memory_order_release);
+			write_index.store(1,std::memory_order_release);
+			curSize.fetch_add(1, std::memory_order_acq_rel);
 		}else{
-			ring[index_val].store(data, std::memory_order_relaxed);
-			write_index.fetch_add(1, std::memory_order_relaxed);
-			curSize.fetch_add(1, std::memory_order_relaxed);
+			ring[index_val].store(data, std::memory_order_release);
+			write_index.fetch_add(1, std::memory_order_acq_rel);
+			curSize.fetch_add(1, std::memory_order_acq_rel);
 		}
 	}
 
@@ -41,15 +41,15 @@ public:
 			return false;
 		}
 
-		volatile size_t index_val =  read_index.load(std::memory_order_relaxed);
+		volatile size_t index_val =  read_index.load(std::memory_order_acquire);
 		if(index_val == RING_SIZE){
-			data = ring[0].load(std::memory_order_relaxed);
-			read_index.store(1,std::memory_order_relaxed);
-			curSize.fetch_sub(1, std::memory_order_relaxed);
+			data = ring[0].load(std::memory_order_acquire);
+			read_index.store(1,std::memory_order_release);
+			curSize.fetch_sub(1, std::memory_order_acq_rel);
 		}else{
-			data = ring[index_val].load(std::memory_order_relaxed);
-			read_index.fetch_add(1,std::memory_order_relaxed);
-			curSize.fetch_sub(1, std::memory_order_relaxed);
+			data = ring[index_val].load(std::memory_order_acquire);
+			read_index.fetch_add(1,std::memory_order_acq_rel);
+			curSize.fetch_sub(1, std::memory_order_acq_rel);
 		}
 		return true;
 	}
@@ -59,11 +59,11 @@ public:
 			return false;
 		}
 
-		volatile size_t index_val =  read_index.load(std::memory_order_relaxed);
+		volatile size_t index_val =  read_index.load(std::memory_order_acquire);
 		if(index_val == RING_SIZE){
-			data = ring[0].load(std::memory_order_relaxed);
+			data = ring[0].load(std::memory_order_acquire);
 		}else{
-			data = ring[index_val].load(std::memory_order_relaxed);
+			data = ring[index_val].load(std::memory_order_acquire);
 		}
 		return true;
 	}
