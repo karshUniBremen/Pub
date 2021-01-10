@@ -53,6 +53,20 @@ public:
 		}
 		return true;
 	}
+
+	bool peek(T& data) noexcept{
+		if(curSize == 0){
+			return false;
+		}
+
+		volatile size_t index_val =  read_index.load(std::memory_order_relaxed);
+		if(index_val == RING_SIZE){
+			data = ring[0].load(std::memory_order_relaxed);
+		}else{
+			data = ring[index_val].load(std::memory_order_relaxed);
+		}
+		return true;
+	}
 };
 
 
