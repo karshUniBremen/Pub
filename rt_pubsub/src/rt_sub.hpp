@@ -19,6 +19,12 @@
 #include <stdexcept>
 #include <atomic>
 #include <unistd.h>
+#include <sys/epoll.h>
+#include <sys/mman.h>
+#include <fcntl.h>
+
+extern int event_poll_file_descriptor;
+extern epoll_event events;
 
 /**
  * @brief real-time subscriber
@@ -27,6 +33,9 @@
  */
 class rt_sub {
 public:
+
+	using user_app_notification_cb_t = void(*)(int index);
+
 	/**
 	 * @brief signal handler function type
 	 * @param signo signal number
@@ -91,21 +100,49 @@ public:
 		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
 	}
 
-	/**
-	 * @brief unblocks and awaits for the signal
-	 * @return (void)
-	 */
-	void unblock_n_await() {
-		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
-		sigsuspend(&oldmask);
+//	/**
+//	 * @brief unblocks and awaits for the signal
+//	 * @return (void)
+//	 */
+//	void unblock_n_await() {
+//		sigprocmask(SIG_UNBLOCK, &newmask, &oldmask);
+//		sigsuspend(&oldmask);
+//	}
+//
+//	/**
+//	 * @brief awaits for the signal
+//	 * @return (void)
+//	 */
+//	void await() {
+//		sigsuspend(&oldmask);
+//	}
+
+	static void user_app_notify(int index) {
+#ifdef ENABLE_USER_APP_EVENT
+		if(user_app_file_descriptor!=-1){
+			write(user_app_file_descriptor,&index,sizeof(index));
+		}
+#endif
+#ifdef ENABLE_DIRECT_USER_NOTIFY_CB_CALL
+		rt_sub* const instance = rt_sub::getInstance();
+		if(instance != nullptr && instance->user_app_notification_cb != nullptr){
+			instance->user_app_notification_cb(index);
+		}
+#endif
 	}
 
-	/**
-	 * @brief awaits for the signal
-	 * @return (void)
-	 */
-	void await() {
-		sigsuspend(&oldmask);
+	static void registerUserAppNotificationCB(user_app_notification_cb_t cb) {
+		rt_sub* const instance = rt_sub::getInstance();
+		if (instance != nullptr && cb != nullptr) {
+			instance->setUserAppNotificationCb(cb);
+		}
+	}
+
+	static void deregisterUserAppNotificationCB() {
+		rt_sub* const instance = rt_sub::getInstance();
+		if (instance != nullptr) {
+			instance->setUserAppNotificationCb(nullptr);
+		}
 	}
 
 //	/**
@@ -130,24 +167,43 @@ private:
 	volatile std::atomic<pid_t> pid;/** process id of subscriber */
 	volatile std::atomic<uint8_t> listen_status;/** listening status of subscriber */
 	inline static rt_sub *instance = nullptr; /** subscriber instance*/
+	user_app_notification_cb_t user_app_notification_cb;
 	/**
 	 * @brief constructor
 	 * @param signal_type signal number of the subscriber signal
 	 * @param signal_handler signal handler
 	 */
 	explicit rt_sub(const uint32_t subscriber_id, int const signal_type, const sig_handler signal_handler) :
-			sig_type { signal_type }, handler { signal_handler }, newmask { }, oldmask { }, action { }, subscriber_id(subscriber_id), mem_offset(0) {
+			sig_type { signal_type }, handler { signal_handler }, newmask { }, oldmask { }, action { }, subscriber_id(subscriber_id), mem_offset(0), user_app_notification_cb(
+					nullptr) {
 		try {
 			if (this->handler == nullptr) {
 				throw std::runtime_error("handler can't be null");
 			}
-
+#ifdef ENABLE_USER_APP_EVENT
+			if (event_poll_file_descriptor == -1) {
+				throw std::runtime_error("Failed to create epoll file descriptor\n");
+			}
+#endif
 			mem_offset = this->subscriber_id * (sizeof(pid) + sizeof(listen_status));
 			pid.store(getpid(), std::memory_order_relaxed);
 			listen_status.store(1, std::memory_order_relaxed);
 			service_var_space.write(mem_offset, pid);
 			service_var_space.write(mem_offset + sizeof(pid), listen_status);
 
+#ifdef ENABLE_USER_APP_EVENT
+			std::string str =  std::string("sub_")+ std::to_string(subscriber_id);
+			user_app_file_descriptor =  open(str.c_str(), O_RDWR); //memfd_create(str.c_str(),1);//
+			if(user_app_file_descriptor == -1){
+				throw std::runtime_error("Failed to create file descriptor \n");
+			}
+
+			event.data.fd = user_app_file_descriptor;
+			if (epoll_ctl(event_poll_file_descriptor, EPOLL_CTL_ADD, user_app_file_descriptor, &event)==-1) {
+				close(event_poll_file_descriptor);
+				throw std::runtime_error("Failed to add file descriptor to epoll\n");
+			}
+#endif
 			sigemptyset(&newmask);
 			sigaddset(&newmask, sig_type);
 			sigprocmask(SIG_BLOCK, &newmask, &oldmask);
@@ -160,6 +216,11 @@ private:
 			std::clog << "Exception: " << e.what() << "\n";
 		}
 	}
+
+	void setUserAppNotificationCb(user_app_notification_cb_t userAppNotificationCb) {
+		user_app_notification_cb = userAppNotificationCb;
+	}
+
 };
 
 #endif /* RT_SUB_HPP_ */
